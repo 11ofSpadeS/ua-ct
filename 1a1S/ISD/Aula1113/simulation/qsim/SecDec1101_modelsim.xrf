@@ -1,0 +1,8 @@
+vendor_name = ModelSim
+source_file = 1, C:/Uni/ISD/Aula1113/SecDec1101.bdf
+source_file = 1, C:/Uni/ISD/Aula1113/db/SecDec1101.cbx.xml
+design_name = SecDec1101
+instance = comp, \y~output , y~output, SecDec1101, 1
+instance = comp, \clk~input , clk~input, SecDec1101, 1
+instance = comp, \x~input , x~input, SecDec1101, 1
+instance = comp, \inst10~0 , inst10~0, SecDec1101, 1

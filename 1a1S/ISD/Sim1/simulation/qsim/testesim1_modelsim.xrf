@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, C:/Uni/ISD/Sim1/testesim1.bdf
+source_file = 1, C:/Uni/ISD/Sim1/ex3.bdf
+source_file = 1, C:/Uni/ISD/Sim1/ex1.bdf
+source_file = 1, C:/Uni/ISD/Sim1/Waveform1.vwf
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/others/maxplus2/74157.bdf
+design_name = ex3
+instance = comp, \F~output , F~output, ex3, 1
+instance = comp, \A~input , A~input, ex3, 1
+instance = comp, \B~input , B~input, ex3, 1
+instance = comp, \D~input , D~input, ex3, 1
+instance = comp, \C~input , C~input, ex3, 1
+instance = comp, \inst|inst1|22~0 , inst|inst1|22~0, ex3, 1

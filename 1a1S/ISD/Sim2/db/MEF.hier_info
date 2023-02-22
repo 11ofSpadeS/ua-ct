@@ -1,0 +1,10 @@
+|MEF
+Q[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+CLK => inst2.CLK
+CLK => inst3.CLK
+RESET_L => inst.IN0
+RESET_L => inst1.IN0
+X => ~NO_FANOUT~
+
+

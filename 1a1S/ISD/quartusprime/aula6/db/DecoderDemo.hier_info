@@ -1,0 +1,18 @@
+|Dec2_4
+Y1 <= and1.DB_MAX_OUTPUT_PORT_TYPE
+X0 => inst.IN0
+X0 => and2.IN0
+X0 => and3.IN0
+X1 => and1.IN1
+X1 => inst2.IN0
+X1 => and3.IN1
+EH => and1.IN2
+EH => and2.IN2
+EH => and3.IN2
+EH => and0.IN2
+EL => inst3.IN0
+Y2 <= and2.DB_MAX_OUTPUT_PORT_TYPE
+Y0 <= and3.DB_MAX_OUTPUT_PORT_TYPE
+Y3 <= and0.DB_MAX_OUTPUT_PORT_TYPE
+
+

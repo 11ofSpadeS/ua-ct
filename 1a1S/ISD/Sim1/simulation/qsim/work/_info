@@ -1,0 +1,149 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Uni/ISD/Sim1/simulation/qsim
+vex1
+Z1 !s110 1670330114
+!i10b 1
+!s100 E;4N8ijYBS[Y55Oa0:]jz2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I^KIhaacg4on_lh8LN3UPD3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1670330113
+Z4 8testesim1.vo
+Z5 Ftestesim1.vo
+!i122 6
+Z6 L0 32 246
+Z7 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z8 !s108 1670330114.000000
+Z9 !s107 testesim1.vo|
+Z10 !s90 -work|work|testesim1.vo|
+!i113 1
+Z11 o-work work
+Z12 tCvgOpt 0
+vex1_vlg_vec_tst
+R1
+!i10b 1
+!s100 YfWVN;keV=:Vok[jP]kT]3
+R2
+I@8BnZL:nRH2RJU7Xgkoo53
+R3
+R0
+w1670330112
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 7
+L0 30 1172
+R7
+r1
+!s85 0
+31
+R8
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R11
+R12
+vex3
+Z13 !s110 1670330545
+!i10b 1
+!s100 b?Bn26BKYN:zj;2dnYR<U0
+R2
+ICP5bDFlczH?eQ6PP;AUkT3
+R3
+R0
+w1670330544
+R4
+R5
+!i122 8
+L0 32 98
+R7
+r1
+!s85 0
+31
+Z14 !s108 1670330545.000000
+R9
+R10
+!i113 1
+R11
+R12
+vex3_vlg_vec_tst
+R13
+!i10b 1
+!s100 [P6Q6PAjVLo]m;OcSoUT=2
+R2
+ImA2I_^0i2>ROhoPmZdROF3
+R3
+R0
+w1670330543
+8Waveform2.vwf.vt
+FWaveform2.vwf.vt
+!i122 9
+L0 30 456
+R7
+r1
+!s85 0
+31
+R14
+!s107 Waveform2.vwf.vt|
+!s90 -work|work|Waveform2.vwf.vt|
+!i113 1
+R11
+R12
+vtestesim1
+!s110 1670329945
+!i10b 1
+!s100 2N?b<On@4PPlR0P1NQW;Y2
+R2
+IO]PkgzWjVKE46R[c^M?QR3
+R3
+R0
+w1670329944
+R4
+R5
+!i122 4
+R6
+R7
+r1
+!s85 0
+31
+Z15 !s108 1670329945.000000
+R9
+R10
+!i113 1
+R11
+R12
+vtestesim1_vlg_vec_tst
+!s110 1670329946
+!i10b 1
+!s100 Q4G_9hl]:;3GVn0nfZO`Z1
+R2
+I:?4JJDJ@ohm;K@e88J2Do3
+R3
+R0
+w1670329943
+8ex2.vwf.vt
+Fex2.vwf.vt
+!i122 5
+L0 30 1129
+R7
+r1
+!s85 0
+31
+R15
+!s107 ex2.vwf.vt|
+!s90 -work|work|ex2.vwf.vt|
+!i113 1
+R11
+R12

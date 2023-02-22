@@ -1,0 +1,129 @@
+body {
+    font-family: 'Gotham Rounded', sans-serif !important;
+    color: #333333;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  header {
+    background-color: #00bfff;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 36px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  header nav li {
+    margin: 0 10px;
+  }
+  
+  header nav a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  h1
+  {
+    background-color: lightgrey;
+    margin: 0px;
+    text-align: center;
+  }
+
+
+  footer {
+    font-family: SansSerif;
+    font-weight: bold;
+    background-color: #00bfff;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+  }
+
+    footer a:link {
+        color: white;
+    }
+
+    /* visited link */
+    footer a:visited {
+        color: darkslateblue;
+    }
+
+    /* mouse over link */
+    footer a:hover {
+        color: black;
+    }
+
+ .lance
+  {
+    height: 500px;
+    background-image:url(../Imagens/Lance_Armstrong.jpg);
+    background-size:cover;
+    margin-top:0px;
+    width:100%;
+  }
+
+  .daiane
+  {
+    height: 500px;
+    background-image:url(../Imagens/Daiane.JPEG);
+    background-size:cover;
+    margin-top:0px;
+    width:100%;
+  }
+
+  .maradona
+  {
+
+    height: 500px;
+    background-image:url(../Imagens/Maradona.jpg);
+    background-size:cover;
+    margin-top:0px;
+    width:100%;
+  }
+
+  .marion
+  {
+
+    height: 500px;
+    background-image:url(../Imagens/marion.jpeg);
+    background-size:cover;
+    margin-top:0px;
+    width:100%;
+  }
+
+  .ben
+  {
+
+    height: 500px;
+    background-image:url(../Imagens/ben.jpg);
+    background-size:cover;
+    margin-top:0px;
+    width:100%;
+  }
+
+  .description p {
+    background-color: lightskyblue;
+    margin: 2rem auto;
+    width: 98%;
+    padding: 50px;
+  }
+
+.navbar a{
+    font-family: 'Gotham Rounded', sans-serif;
+    color: white;
+}

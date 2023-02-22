@@ -1,0 +1,90 @@
+#cabecalho {
+    background-color: rgb(5, 90, 124);
+    color: rgb(30, 125, 234);
+    text-align: center;
+    border-radius: 10px;
+}
+
+body {
+    background-color: LightSkyBlue;
+    width: 90%;
+    margin: auto;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#h1 {
+    background-color: rgb(159, 235, 241);
+    font-size: 40px; 
+    width: 500px; 
+    position: relative;
+    left: 32%;
+    border:3px ;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#PPeriodo {
+    background-color: darksalmon;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 10px;
+
+
+}
+
+#ReflexPP {
+    border-top: 3px solid darksalmon;
+    border-bottom: 3px solid darksalmon;
+}
+
+#SPeriodo {
+    background-color: DarkSeaGreen;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#ReflexSP {
+
+    border-top: 3px solid DarkSeaGreen;
+    border-bottom: 3px solid DarkSeaGreen;
+}
+
+#TPeriodo {
+    background-color: DarkTurquoise;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#ReflexTP {
+    border-top: 3px solid DarkTurquoise;
+    border-bottom: 3px solid DarkTurquoise;
+}
+
+a {
+    color: default;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(96, 158, 238);
+    text-decoration: none;
+}
+
+div h1 {
+    text-align: center;
+}
+
+div h3 {
+    text-align: center;
+}
+
+#rodape {
+    margin: 1em 0;
+    font-size: 10px;
+    border-top: grey solid 2px;
+    border-bottom: grey solid 2px;
+    text-align: right;
+}

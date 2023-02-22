@@ -1,0 +1,140 @@
+$comment
+	File created using the following command:
+		vcd file MuxDemo.msim.vcd -direction
+$end
+$date
+	Tue Nov 22 12:42:36 2022
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module Mux16_1_vlg_vec_tst $end
+$var reg 1 ! I0 $end
+$var reg 1 " I1 $end
+$var reg 1 # I2 $end
+$var reg 1 $ I3 $end
+$var reg 1 % I4 $end
+$var reg 1 & I5 $end
+$var reg 1 ' I6 $end
+$var reg 1 ( I7 $end
+$var reg 1 ) I8 $end
+$var reg 1 * I9 $end
+$var reg 1 + I10 $end
+$var reg 1 , I11 $end
+$var reg 1 - I12 $end
+$var reg 1 . I13 $end
+$var reg 1 / I14 $end
+$var reg 1 0 I15 $end
+$var reg 1 1 S0 $end
+$var reg 1 2 S1 $end
+$var reg 1 3 S2 $end
+$var reg 1 4 S3 $end
+$var wire 1 5 Y $end
+
+$scope module i1 $end
+$var wire 1 6 gnd $end
+$var wire 1 7 vcc $end
+$var wire 1 8 unknown $end
+$var tri1 1 9 devclrn $end
+$var tri1 1 : devpor $end
+$var tri1 1 ; devoe $end
+$var wire 1 < Y~output_o $end
+$var wire 1 = I5~input_o $end
+$var wire 1 > S1~input_o $end
+$var wire 1 ? I12~input_o $end
+$var wire 1 @ S0~input_o $end
+$var wire 1 A I4~input_o $end
+$var wire 1 B inst14|inst7~0_combout $end
+$var wire 1 C I13~input_o $end
+$var wire 1 D inst14|inst7~1_combout $end
+$var wire 1 E S3~input_o $end
+$var wire 1 F I10~input_o $end
+$var wire 1 G I3~input_o $end
+$var wire 1 H I2~input_o $end
+$var wire 1 I inst14|inst7~2_combout $end
+$var wire 1 J I11~input_o $end
+$var wire 1 K inst14|inst7~3_combout $end
+$var wire 1 L S2~input_o $end
+$var wire 1 M I1~input_o $end
+$var wire 1 N I8~input_o $end
+$var wire 1 O I0~input_o $end
+$var wire 1 P inst14|inst7~4_combout $end
+$var wire 1 Q I9~input_o $end
+$var wire 1 R inst14|inst7~5_combout $end
+$var wire 1 S inst14|inst7~6_combout $end
+$var wire 1 T I14~input_o $end
+$var wire 1 U I7~input_o $end
+$var wire 1 V I6~input_o $end
+$var wire 1 W inst14|inst7~7_combout $end
+$var wire 1 X I15~input_o $end
+$var wire 1 Y inst14|inst7~8_combout $end
+$var wire 1 Z inst14|inst7~9_combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+1"
+1#
+1$
+1%
+1&
+1'
+0(
+1)
+1*
+1+
+1,
+1-
+1.
+1/
+10
+01
+02
+03
+04
+05
+06
+17
+x8
+19
+1:
+1;
+0<
+1=
+0>
+1?
+0@
+1A
+1B
+1C
+1D
+0E
+1F
+1G
+1H
+1I
+1J
+1K
+0L
+1M
+1N
+0O
+0P
+1Q
+0R
+0S
+1T
+0U
+1V
+1W
+1X
+1Y
+0Z
+$end
+#1000000

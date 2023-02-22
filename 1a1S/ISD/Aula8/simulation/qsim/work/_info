@@ -1,0 +1,83 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Uni/ISD/Aula8/simulation/qsim
+vAddSub4
+!s110 1669724451
+!i10b 1
+!s100 z1UV:?b7ZHAzCcYW5?zIP0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I=IVJFnmj`2D`AXY;BaCo72
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1669724451
+Z3 8AddSubDemo.vo
+Z4 FAddSubDemo.vo
+!i122 1
+Z5 L0 32 379
+Z6 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1669724451.000000
+Z7 !s107 AddSubDemo.vo|
+Z8 !s90 -work|work|AddSubDemo.vo|
+!i113 1
+Z9 o-work work
+Z10 tCvgOpt 0
+n@add@sub4
+vAddSubDemo
+Z11 !s110 1669726223
+!i10b 1
+!s100 YgjO;Pmh0Wkm]J`Dkl@IC2
+R1
+I6c=S8@aj1SPIh5B3b@CnO1
+R2
+R0
+w1669726223
+R3
+R4
+!i122 11
+R5
+R6
+r1
+!s85 0
+31
+Z12 !s108 1669726223.000000
+R7
+R8
+!i113 1
+R9
+R10
+n@add@sub@demo
+vAddSubDemo_vlg_vec_tst
+R11
+!i10b 1
+!s100 O4d6a_=SgkgNOTRAz=l6o2
+R1
+I2^`NIOTH]G2m>oZ=LlEhj3
+R2
+R0
+w1669726222
+8Waveform4.vwf.vt
+FWaveform4.vwf.vt
+!i122 12
+L0 30 98
+R6
+r1
+!s85 0
+31
+R12
+!s107 Waveform4.vwf.vt|
+!s90 -work|work|Waveform4.vwf.vt|
+!i113 1
+R9
+R10
+n@add@sub@demo_vlg_vec_tst

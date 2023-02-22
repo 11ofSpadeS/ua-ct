@@ -1,0 +1,142 @@
+\documentclass{report}
+\usepackage[T1]{fontenc} % Fontes T1
+\usepackage[utf8]{inputenc} % Input UTF8
+\usepackage[backend=biber, style=ieee]{biblatex} % para usar bibliografia
+\usepackage{csquotes}
+\usepackage[portuguese]{babel} %Usar língua portuguesa
+\usepackage{blindtext} % Gerar texto automaticamente
+\usepackage[printonlyused]{acronym}
+\usepackage{hyperref} % para autoref
+\usepackage{graphicx}
+\usepackage{indentfirst}
+
+\bibliography{bibliografia}
+
+
+\begin{document}
+%%
+% Definições
+%
+\def\titulo{DOPPING}
+\def\data{DATA}
+\def\autores{Gonçalo Martins, José Jordão}
+\def\autorescontactos{(112678) goncalobmartins@ua.pt, (103075) josemmjordao@ua.pt}
+\def\versao{1}
+\def\departamento{Dept. de Eletrónica, Telecomunicações e Informática}
+\def\empresa{Universidade de Aveiro}
+\def\logotipo{ua.pdf}
+%
+%%%%%% CAPA %%%%%%
+%
+\begin{titlepage}
+
+\begin{center}
+%
+\vspace*{50mm}
+%
+{\Huge \titulo}\\ 
+%
+\vspace{10mm}
+%
+{\Large \empresa}\\
+%
+\vspace{10mm}
+%
+{\LARGE \autores}\\ 
+%
+\vspace{30mm}
+%
+\begin{figure}[h]
+\center
+\includegraphics{\logotipo}
+\end{figure}
+%
+\vspace{30mm}
+\end{center}
+%
+\begin{flushright}
+\versao
+\end{flushright}
+\end{titlepage}
+
+%%  Página de Título %%
+\title{%
+{\Huge\textbf{\titulo}}\\
+{\Large \departamento\\ \empresa}
+}
+%
+\author{%
+    \autores \\
+    \autorescontactos
+}
+%
+\date{\today}
+%
+\maketitle
+
+\pagenumbering{roman}
+
+%%%%%% RESUMO %%%%%%
+%\begin{abstract}
+%O Dopping e o desporto são dois temas inseparáveis pois a natureza competitiva do ser Humano leva a que este procure sempre maneiras de obter uma vantagem, por mais pequena que esta possa ser.
+%Decidimos então apresentar o tema começando por falar dos vários tipos de Dopping existentes bem como as suas e os primeiros casos registados. 
+%Como é obvio não podemos falar de Dopping sem falar na guerra que é feita contra o mesmo e a evolução constante de ambas as partes, para por um lado dificultar a deteção e por outro facilitar a deteção
+%\end{abstract}
+
+%%%%%% Agradecimentos %%%%%%
+% Segundo glisc deveria aparecer após conclusão...
+%\renewcommand{\abstractname}{Agradecimentos}
+%\begin{abstract}
+%Eventuais agradecimentos.
+%Comentar bloco caso não existam agradecimentos a fazer.
+%\end{abstract}
+
+
+\tableofcontents
+% \listoftables     % descomentar se necessário
+% \listoffigures    % descomentar se necessário
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\clearpage
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Introdução}
+
+\label{chap.introducao}
+    Com o aproximar do Campeonato Mundial de Futebol da FIFA Catar 2022 voltamos a ouvir falar de Dopping, tema este que é recorrente sempre que ocorre um grande evento desportivo.
+    O ser humano procura sempre melhorar e evoluir, e não existe um ambiente que o demonstre melhor que o desporto de alta competição. Consideremos como exemplo o atletismo. Na versão masculina deste  desporto,  13 dos 19 recordes estabelecidos anteriormente foram batidos depois do virar do século, alguns mais que uma vez. A mesma tendência se verifica no sexo oposto. 18 dos 20 recordes existentes, foram atingidos nos ultimos 22 anos. Com este ambiente extremamente competitivo muitos atletas procuram um atalho, uma vantagem sobre o seu adversário. O tipo de vantagem que falo é nada mais que dopping.
+    É difícil dizer ao certo quando surgiu o dopping, mas o caso que levou o comitê olímpico, neste caso, a controlar o uso deste tipo substâncias foi a morte de 2 atletas nos jogos de 1960 e 1964.
+    No entanto na historia recente tem-se verificado cada vez mais uma maior ocorrência de casos de Dopping, especialmente em competições de alto nível desde o atletismo ao futebol e ciclismo.
+
+\chapter {Tipos de Dopping}
+\chapter {Controlo Anti-Dopping}
+\chapter {Consequências}
+\chapter {Casos Famosos}
+
+\chapter*{Contribuições dos autores}
+Resumir aqui o que cada autor fez no trabalho.
+Usar abreviaturas para identificar os autores,
+por exemplo AS para António Silva.
+
+\vspace{10pt}
+\textbf{Indicar a percentagem de contribuição de cada autor.}\\
+
+\autores : xx\%, yy\%\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter*{Acrónimos}
+\begin{acronym}
+\acro{gbm}[GBM]{Gonçalo Biscaia Martins}
+\acro{jj}[JJ]{José Jordão}
+\acro{ua}[UA]{Universidade de Aveiro}
+\acro{leci}[LECI]{Licenciatura em Engenharia de Computadores e Informática}
+\acro{glisc}[GLISC]{Grey Literature International Steering Committee}
+\end{acronym}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printbibliography
+
+\end{document}
