@@ -19,11 +19,3 @@ def genFibonacci(n):
             lst.append(fn)
     return lst
 
-def main():
-    
-    n = int(input("N?"))
-
-    print(genFibonacci(n))
-
-
-main()
