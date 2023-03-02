@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 
-public class notasturma {
+public class GradesClass {
     public static void main(String args[]) {
         Scanner input = new Scanner(System.in);
         System.out.println("Numero de alunos da turma:");
