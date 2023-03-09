@@ -23,6 +23,10 @@ public class Circle{
         }
     }
 
+    public boolean equals(Circle c2) {
+        return this.radius == c2.radius;
+    }
+
     public String toString(){
         return "Raio do circulo =" + this.radius;
     }

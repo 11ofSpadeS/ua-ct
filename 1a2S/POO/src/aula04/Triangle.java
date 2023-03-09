@@ -36,6 +36,11 @@ public class Triangle {
         }
     }
 
+    public boolean equals(Triangle c2) {
+        return this.side1 == c2.side1 && this.side2 == c2.side2 && this.side3 == c2.side3;
+    }
+
+
     public String toString() {
         return "Este triangulo possui os seguinte lados: \n lado 1 " + side1 + "\nlado 2 " + side2 + "\nlado 3 " + side3;
     }
