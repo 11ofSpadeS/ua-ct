@@ -1,7 +1,7 @@
 package aula04;
 import java.util.Scanner;
 
-public class tester {
+public class shapetester {
     static boolean x = true;
     public static void main(String args[]) {
         Scanner input = new Scanner(System.in);
