@@ -44,4 +44,4 @@ def dateIsValid(year, month, day):
         
 #def previousDay(year, month, day):
 
-print(dateIsValid(1999, 13, 2))
+print(dateIsValid(1900, 2, 29))
