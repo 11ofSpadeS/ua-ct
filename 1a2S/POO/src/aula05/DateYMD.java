@@ -4,9 +4,9 @@ package aula05;
 
 public class DateYMD {
 
-    public int year;
-    public int month;
-    public int day;
+    private int year;
+    private int month;
+    private int day;
 
 
 

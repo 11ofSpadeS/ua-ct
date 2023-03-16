@@ -57,6 +57,5 @@ public class DateTester {
                     System.out.println("Invalid option");
             }
         }
-        input.close();
     }
 }
