@@ -25,7 +25,7 @@ public class DateTester {
                     int month = input.nextInt();
                     System.out.print("Year: ");
                     int year = input.nextInt();
-                    date = new DateYMD(year, month, day);
+                    date = new DateYMD(day, month, year);
                     break;
                 case 2:
                     if (date == null) {

@@ -58,7 +58,7 @@ public class DateYMD {
     }
 
 
-    public DateYMD(int year, int month, int day){
+    public DateYMD(int day, int month, int year){
         if(valid(day , month, year)) {
             this.year = year;
             this.month = month;
