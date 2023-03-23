@@ -1,4 +1,4 @@
-package aula05;
+/*package aula05;
 
 public class Auction {
 
@@ -20,3 +20,4 @@ public class Auction {
 
     }
 }
+*/

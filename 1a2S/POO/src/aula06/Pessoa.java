@@ -15,6 +15,10 @@ public class Pessoa {
         this.birthDate = birthDate;
     }
 
+  //  public DateYMD setDate(DateYMD date){
+  //      if
+  //  }
+
     public String getName() {
         return this.name;
     }
@@ -26,6 +30,8 @@ public class Pessoa {
     public DateYMD getBirthdate() {
         return birthDate;
     }
+
+
 
     @Override
     public String toString() {

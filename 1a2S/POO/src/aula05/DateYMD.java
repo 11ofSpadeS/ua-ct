@@ -130,7 +130,10 @@ public class DateYMD {
         return new int[]{this.day, this.month, this.year};
     }
 
-
+    @Override
+    public String toString() {
+        return String.format("%d/%d/%d" , getDay() , getMonth() ,getYear());
+    }
 
 }
 
