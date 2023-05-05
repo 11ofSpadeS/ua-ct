@@ -1,0 +1,195 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/ua-leci/MiniProjetoReal/simulation/qsim
+Ebin2bcd
+Z1 w1681823253
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 WOh:M[al;oVzG5c`<He>D0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z7 DPx10 cycloneive 21 cycloneive_components 0 22 zGMDhP>8e@2k@f0e<PY]k2
+!i122 8
+R0
+Z8 8mini_projeto.vho
+Z9 Fmini_projeto.vho
+l0
+L35 1
+V5[F]gESLKZ67V6CeIIP1e2
+!s100 c?`6KFlQ2?C0H5J8J;`UK0
+Z10 OV;C;2020.1;71
+32
+Z11 !s110 1681823254
+!i10b 1
+Z12 !s108 1681823254.000000
+Z13 !s90 -work|work|mini_projeto.vho|
+Z14 !s107 mini_projeto.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 7 bin2bcd 0 22 5[F]gESLKZ67V6CeIIP1e2
+!i122 8
+l168
+L43 1485
+V=bUi]@zXoKQ2Wnk3YGFDR0
+!s100 H@2f=Nz1ERKd^?c4LD@bJ0
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Ebin2bcd_vhd_vec_tst
+R1
+R5
+R6
+!i122 9
+R0
+Z17 8Waveform1.vwf.vht
+Z18 FWaveform1.vwf.vht
+l0
+Z19 L32 1
+V>94aYDjkBJG[]GJcPK2=n1
+!s100 H1zWR:LJZOFhOCNl8XCho0
+R10
+32
+R11
+!i10b 1
+R12
+Z20 !s90 -work|work|Waveform1.vwf.vht|
+Z21 !s107 Waveform1.vwf.vht|
+!i113 1
+R15
+R16
+Abin2bcd_arch
+R5
+R6
+Z22 DEx4 work 19 bin2bcd_vhd_vec_tst 0 22 >94aYDjkBJG[]GJcPK2=n1
+!i122 9
+l47
+Z23 L34 58
+Z24 VB_gnblDkFL2h]^8nPLgRo1
+Z25 !s100 k710[EkVh;cZ@4BZ@c[3;0
+R10
+32
+R11
+!i10b 1
+R12
+R20
+R21
+!i113 1
+R15
+R16
+Ecounterdown59
+Z26 w1681821886
+R3
+R7
+R2
+Z27 DPx6 altera 11 dffeas_pack 0 22 dc5N=DKXMMTVYdUQ@D3FA2
+R4
+R5
+R6
+Z28 DPx6 altera 28 altera_primitives_components 0 22 ca:ehlQAg4;_gVV:^8MAg3
+!i122 4
+R0
+R8
+R9
+l0
+L37 1
+VEf136eBHiJ^40^YUB;8k>0
+!s100 ?go8>17=_B=RHX8Xh0V]F2
+R10
+32
+Z29 !s110 1681821887
+!i10b 1
+Z30 !s108 1681821887.000000
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R3
+R7
+R2
+R27
+R4
+R5
+R6
+R28
+DEx4 work 13 counterdown59 0 22 Ef136eBHiJ^40^YUB;8k>0
+!i122 4
+l86
+L45 413
+VACJUmAQGBbO?L<@4TM_=S2
+!s100 P<_C6aGkkJ46LhLhT4<`Z2
+R10
+32
+R29
+!i10b 1
+R30
+R13
+R14
+!i113 1
+R15
+R16
+Ecounterdown59_vhd_vec_tst
+Z31 w1681821885
+R5
+R6
+!i122 5
+R0
+Z32 8Waveform.vwf.vht
+Z33 FWaveform.vwf.vht
+l0
+R19
+VWk:Ba0lDNUX:@j8KeH6N;3
+!s100 Ph1EM8S``EF^JVk]67c543
+R10
+32
+R29
+!i10b 1
+R30
+Z34 !s90 -work|work|Waveform.vwf.vht|
+Z35 !s107 Waveform.vwf.vht|
+!i113 1
+R15
+R16
+Acounterdown59_arch
+R5
+R6
+DEx4 work 25 counterdown59_vhd_vec_tst 0 22 Wk:Ba0lDNUX:@j8KeH6N;3
+!i122 5
+l47
+L34 47
+VAm:i@ngM:128Aa8R@B5nS3
+!s100 5UCVoG^?e?I>L]Nj?C?fU0
+R10
+32
+R29
+!i10b 1
+R30
+R34
+R35
+!i113 1
+R15
+R16
