@@ -3,7 +3,7 @@ package aula06;
 import aula05.DateYMD;
 
 import java.util.Scanner;
-
+/*
 public class ContactMenu {
     private static Contact[] contacts;
     private static Scanner input = new Scanner(System.in);
@@ -171,3 +171,4 @@ public class ContactMenu {
                     return null;
                 }
             }
+*/

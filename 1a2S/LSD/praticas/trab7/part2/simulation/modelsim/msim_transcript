@@ -1,0 +1,157 @@
+# Reading pref.tcl
+# do Counter_Up_Down_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/ua-leci/1a2S/LSD/praticas/trab7/part2/Counter_Up_Down.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:56:38 on May 02,2023
+# vcom -reportprogress 300 -93 -work work C:/ua-leci/1a2S/LSD/praticas/trab7/part2/Counter_Up_Down.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Counter_Up_Down
+# -- Compiling architecture Behavioral of Counter_Up_Down
+# End time: 14:56:38 on May 02,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vcom -reportprogress 300 -work work C:/ua-leci/1a2S/LSD/praticas/trab7/part2/Counter_Up_DownTb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:56:53 on May 02,2023
+# vcom -reportprogress 300 -work work C:/ua-leci/1a2S/LSD/praticas/trab7/part2/Counter_Up_DownTb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Counter_Up_DownTb
+# -- Compiling architecture Stimulus of Counter_Up_DownTb
+# -- Loading entity Counter_Up_Down
+# End time: 14:56:53 on May 02,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ua-leci/1a2S/LSD/praticas/trab7/part2/Counter_Up_DownTb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:56:54 on May 02,2023
+# vcom -reportprogress 300 -work work C:/ua-leci/1a2S/LSD/praticas/trab7/part2/Counter_Up_DownTb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Counter_Up_DownTb
+# -- Compiling architecture Stimulus of Counter_Up_DownTb
+# -- Loading entity Counter_Up_Down
+# End time: 14:56:54 on May 02,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ua-leci/1a2S/LSD/praticas/trab7/part2/Counter_Up_DownTb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:56:54 on May 02,2023
+# vcom -reportprogress 300 -work work C:/ua-leci/1a2S/LSD/praticas/trab7/part2/Counter_Up_DownTb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Counter_Up_DownTb
+# -- Compiling architecture Stimulus of Counter_Up_DownTb
+# -- Loading entity Counter_Up_Down
+# End time: 14:56:54 on May 02,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ua-leci/1a2S/LSD/praticas/trab7/part2/Counter_Up_DownTb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:56:55 on May 02,2023
+# vcom -reportprogress 300 -work work C:/ua-leci/1a2S/LSD/praticas/trab7/part2/Counter_Up_DownTb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Counter_Up_DownTb
+# -- Compiling architecture Stimulus of Counter_Up_DownTb
+# -- Loading entity Counter_Up_Down
+# End time: 14:56:55 on May 02,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ua-leci/1a2S/LSD/praticas/trab7/part2/Counter_Up_DownTb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:56:55 on May 02,2023
+# vcom -reportprogress 300 -work work C:/ua-leci/1a2S/LSD/praticas/trab7/part2/Counter_Up_DownTb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Counter_Up_DownTb
+# -- Compiling architecture Stimulus of Counter_Up_DownTb
+# -- Loading entity Counter_Up_Down
+# End time: 14:56:55 on May 02,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work C:/ua-leci/1a2S/LSD/praticas/trab7/part2/Counter_Up_DownTb.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 14:56:55 on May 02,2023
+# vcom -reportprogress 300 -work work C:/ua-leci/1a2S/LSD/praticas/trab7/part2/Counter_Up_DownTb.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Counter_Up_DownTb
+# -- Compiling architecture Stimulus of Counter_Up_DownTb
+# -- Loading entity Counter_Up_Down
+# End time: 14:56:55 on May 02,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.counter_up_downtb
+# vsim work.counter_up_downtb 
+# Start time: 15:00:04 on May 02,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.counter_up_downtb(stimulus)
+# Loading work.counter_up_down(behavioral)
+vsim work.counter_up_downtb
+# End time: 15:00:08 on May 02,2023, Elapsed time: 0:00:04
+# Errors: 0, Warnings: 0
+# vsim work.counter_up_downtb 
+# Start time: 15:00:08 on May 02,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.counter_up_downtb(stimulus)
+# Loading work.counter_up_down(behavioral)
+add wave -position end  sim:/counter_up_downtb/s_reset
+add wave -position end  sim:/counter_up_downtb/s_clk
+add wave -position end  sim:/counter_up_downtb/s_enable
+add wave -position end  sim:/counter_up_downtb/s_upDown_n
+add wave -position end  sim:/counter_up_downtb/s_cntOut
+run -continue
+vsim rtl_work.counter_up_downtb(stimulus)
+# End time: 15:06:15 on May 02,2023, Elapsed time: 0:06:07
+# Errors: 0, Warnings: 0
+# vsim rtl_work.counter_up_downtb(stimulus) 
+# Start time: 15:06:15 on May 02,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading rtl_work.counter_up_downtb(stimulus)
+# Loading rtl_work.counter_up_down(behavioral)
+add wave -position end  sim:/counter_up_downtb/s_cntOut
+add wave -position end  sim:/counter_up_downtb/s_upDown_n
+add wave -position end  sim:/counter_up_downtb/s_enable
+add wave -position end  sim:/counter_up_downtb/s_clk
+add wave -position end  sim:/counter_up_downtb/s_reset
+run
+run
+run -all
+# Break key hit
+# Break in Process clock_proc at C:/ua-leci/1a2S/LSD/praticas/trab7/part2/Counter_Up_DownTb.vhd line 29
+restart -f
+run
+# GetModuleFileName: Impossível localizar o módulo especificado.
+# 
+# 
+# End time: 15:08:03 on May 02,2023, Elapsed time: 0:01:48
+# Errors: 0, Warnings: 0

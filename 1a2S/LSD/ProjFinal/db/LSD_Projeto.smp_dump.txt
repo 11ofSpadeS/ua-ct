@@ -1,0 +1,12 @@
+
+State Machine - |PaoTop|MaquinaDePao:maquina_pao_fsm|s_currentState
+Name s_currentState.Extra s_currentState.Extra_Init s_currentState.Cozedura s_currentState.Cozedura_Init s_currentState.Levedura s_currentState.Levedura_Init s_currentState.Amassar s_currentState.Amassar_Init s_currentState.TInit 
+s_currentState.TInit 0 0 0 0 0 0 0 0 0 
+s_currentState.Amassar_Init 0 0 0 0 0 0 0 1 1 
+s_currentState.Amassar 0 0 0 0 0 0 1 0 1 
+s_currentState.Levedura_Init 0 0 0 0 0 1 0 0 1 
+s_currentState.Levedura 0 0 0 0 1 0 0 0 1 
+s_currentState.Cozedura_Init 0 0 0 1 0 0 0 0 1 
+s_currentState.Cozedura 0 0 1 0 0 0 0 0 1 
+s_currentState.Extra_Init 0 1 0 0 0 0 0 0 1 
+s_currentState.Extra 1 0 0 0 0 0 0 0 1 

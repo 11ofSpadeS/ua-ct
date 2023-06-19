@@ -1,0 +1,17 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity AccN is
+	 generic ( N : positive :=  )
+    Port ( N1 : in  STD_LOGIC_VECTOR (N-1 downto 0) ;
+           N2 : in  STD_LOGIC_VECTOR (N-1 downto 0) ;
+           S : out  STD_LOGIC_VECTOR (N-1 downto 0));
+end AccN;
+
+architecture Behavioral of AccN is
+begin
+
+    SUM <= NUM1 + NUM2;
+
+end Behavioral;

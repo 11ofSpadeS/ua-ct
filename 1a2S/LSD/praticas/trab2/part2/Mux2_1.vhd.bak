@@ -1,0 +1,20 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity multiplexer is
+    port (a, b : in std_logic;
+          sel : in std_logic;
+          out : out std_logic);
+end entity;
+
+architecture behavioral of multiplexer is
+begin
+    process (a, b, sel)
+    begin
+        if sel = '0' then
+            out <= a;
+        else
+            out <= b;
+        end if;
+    end process;
+end architecture;

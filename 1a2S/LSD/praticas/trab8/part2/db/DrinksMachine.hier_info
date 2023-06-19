@@ -1,0 +1,58 @@
+|DrinkMachine
+LEDG[0] <= DrinksFSM:inst1.Abrir
+CLOCK_50 => ClkDividerN:inst.clkIn
+KEY[0] => DrinksFSM:inst1.reset
+SW[0] => DrinksFSM:inst1.V
+SW[1] => DrinksFSM:inst1.C
+
+
+|DrinkMachine|DrinksFSM:inst1
+clock => fstate~1.DATAIN
+reset => reg_fstate.E0.OUTPUTSELECT
+reset => reg_fstate.E20.OUTPUTSELECT
+reset => reg_fstate.E40.OUTPUTSELECT
+reset => reg_fstate.E50.OUTPUTSELECT
+reset => reg_fstate.E60.OUTPUTSELECT
+reset => reg_fstate.E7080.OUTPUTSELECT
+reset => reg_fstate.E90Plus.OUTPUTSELECT
+reset => Abrir.OUTPUTSELECT
+C => reg_fstate.DATAA
+C => process_1.IN0
+C => reg_fstate.DATAA
+C => process_1.IN0
+V => process_1.IN1
+V => process_1.IN1
+Abrir <= Abrir.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DrinkMachine|ClkDividerN:inst
+clkIn => s_divCounter[0].CLK
+clkIn => s_divCounter[1].CLK
+clkIn => s_divCounter[2].CLK
+clkIn => s_divCounter[3].CLK
+clkIn => s_divCounter[4].CLK
+clkIn => s_divCounter[5].CLK
+clkIn => s_divCounter[6].CLK
+clkIn => s_divCounter[7].CLK
+clkIn => s_divCounter[8].CLK
+clkIn => s_divCounter[9].CLK
+clkIn => s_divCounter[10].CLK
+clkIn => s_divCounter[11].CLK
+clkIn => s_divCounter[12].CLK
+clkIn => s_divCounter[13].CLK
+clkIn => s_divCounter[14].CLK
+clkIn => s_divCounter[15].CLK
+clkIn => s_divCounter[16].CLK
+clkIn => s_divCounter[17].CLK
+clkIn => s_divCounter[18].CLK
+clkIn => s_divCounter[19].CLK
+clkIn => s_divCounter[20].CLK
+clkIn => s_divCounter[21].CLK
+clkIn => s_divCounter[22].CLK
+clkIn => s_divCounter[23].CLK
+clkIn => s_divCounter[24].CLK
+clkIn => s_divCounter[25].CLK
+clkIn => clkOut~reg0.CLK
+clkOut <= clkOut~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

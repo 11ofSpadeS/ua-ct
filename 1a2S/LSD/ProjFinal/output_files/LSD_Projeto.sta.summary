@@ -1,0 +1,113 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'CLOCK_50'
+Slack : -5.881
+TNS   : -159.425
+
+Type  : Slow 1200mV 85C Model Setup 'MaquinaDePao:maquina_pao_fsm|s_currentState.Amassar_Init'
+Slack : -2.564
+TNS   : -8.156
+
+Type  : Slow 1200mV 85C Model Setup 'MaquinaDePao:maquina_pao_fsm|s_currentState.Amassar'
+Slack : -2.402
+TNS   : -9.719
+
+Type  : Slow 1200mV 85C Model Hold 'CLOCK_50'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'MaquinaDePao:maquina_pao_fsm|s_currentState.Amassar'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'MaquinaDePao:maquina_pao_fsm|s_currentState.Amassar_Init'
+Slack : 0.715
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -63.395
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MaquinaDePao:maquina_pao_fsm|s_currentState.Amassar'
+Slack : 0.416
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MaquinaDePao:maquina_pao_fsm|s_currentState.Amassar_Init'
+Slack : 0.444
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -5.243
+TNS   : -141.509
+
+Type  : Slow 1200mV 0C Model Setup 'MaquinaDePao:maquina_pao_fsm|s_currentState.Amassar_Init'
+Slack : -2.298
+TNS   : -7.244
+
+Type  : Slow 1200mV 0C Model Setup 'MaquinaDePao:maquina_pao_fsm|s_currentState.Amassar'
+Slack : -2.182
+TNS   : -8.603
+
+Type  : Slow 1200mV 0C Model Hold 'CLOCK_50'
+Slack : 0.092
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'MaquinaDePao:maquina_pao_fsm|s_currentState.Amassar'
+Slack : 0.375
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'MaquinaDePao:maquina_pao_fsm|s_currentState.Amassar_Init'
+Slack : 0.690
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -63.395
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MaquinaDePao:maquina_pao_fsm|s_currentState.Amassar'
+Slack : 0.430
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MaquinaDePao:maquina_pao_fsm|s_currentState.Amassar_Init'
+Slack : 0.458
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'CLOCK_50'
+Slack : -2.742
+TNS   : -57.107
+
+Type  : Fast 1200mV 0C Model Setup 'MaquinaDePao:maquina_pao_fsm|s_currentState.Amassar_Init'
+Slack : -0.881
+TNS   : -2.652
+
+Type  : Fast 1200mV 0C Model Setup 'MaquinaDePao:maquina_pao_fsm|s_currentState.Amassar'
+Slack : -0.831
+TNS   : -2.596
+
+Type  : Fast 1200mV 0C Model Hold 'CLOCK_50'
+Slack : -0.062
+TNS   : -0.119
+
+Type  : Fast 1200mV 0C Model Hold 'MaquinaDePao:maquina_pao_fsm|s_currentState.Amassar'
+Slack : 0.179
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'MaquinaDePao:maquina_pao_fsm|s_currentState.Amassar_Init'
+Slack : 0.344
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLOCK_50'
+Slack : -3.000
+TNS   : -52.755
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MaquinaDePao:maquina_pao_fsm|s_currentState.Amassar'
+Slack : 0.395
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MaquinaDePao:maquina_pao_fsm|s_currentState.Amassar_Init'
+Slack : 0.430
+TNS   : 0.000
+
+------------------------------------------------------------

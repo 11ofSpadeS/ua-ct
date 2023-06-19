@@ -1,0 +1,31 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all; 
+
+
+
+architecture Shell of AccN is
+
+signal s_AdderOut , s_RegOut : std_logic_vector(N-1 downto 0);
+
+begin
+
+registo : entity work.RegN(Behavioral)
+	generic map (N => N)
+	port map ( clk => clk,
+				  reset => reset,
+				  enable => enable
+				  d => s_AdderOut,
+				  q => s_RegOut);
+				  
+somador : entity work.AdderN(Behav)
+	generic map (N => N)
+	port map ( operand0 => d,
+				  operand1 => s_RegOut,
+				  result => s_AdderOut);
+			
+q <= s_RegOut;
+
+end Shell
+
+architecture Behav of AccN is

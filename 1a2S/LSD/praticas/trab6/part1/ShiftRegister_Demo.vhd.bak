@@ -1,0 +1,21 @@
+
+
+entity shiftregister_demo is
+	port( SW : int std_logic_vector (0 downto 0);
+			CLOCK_50 : in std_logic;
+			LEDR: out std_logic_vector(7 downto 0));
+end shiftregister_demo
+
+architecture Shell of ShiftRegister_Demo is
+
+	signal clock : std_logic;
+
+begin
+
+	top_level: entity work.ShiftRegisterN(Behav)
+	generic map(size => 8)
+	clk => clock,
+	sin => SW(0),
+	dataOut => LEDR(7 downto 0));
+	
+	divisor: entity work.Freq_Divider(Behavioral)

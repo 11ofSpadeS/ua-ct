@@ -1,0 +1,95 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/ua-leci/1a2S/LSD/praticas/trab8/part2/simulation/modelsim
+Eclkdividern
+Z1 w1681220748
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 1
+R0
+Z5 8C:/ua-leci/1a2S/LSD/praticas/trab8/part2/ClkDividerN.vhd
+Z6 FC:/ua-leci/1a2S/LSD/praticas/trab8/part2/ClkDividerN.vhd
+l0
+L5 1
+V=3Cjd_D4i_S8Y6NBI3PHk1
+!s100 QE@o>N@X@Y3A]PEo`0AZ03
+Z7 OV;C;2020.1;71
+31
+Z8 !s110 1683643543
+!i10b 1
+Z9 !s108 1683643542.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/ua-leci/1a2S/LSD/praticas/trab8/part2/ClkDividerN.vhd|
+!s107 C:/ua-leci/1a2S/LSD/praticas/trab8/part2/ClkDividerN.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+DEx4 work 11 clkdividern 0 22 =3Cjd_D4i_S8Y6NBI3PHk1
+!i122 1
+l17
+L13 22
+V@BQTliCb0IX]^Q50VLNo]1
+!s100 gfni=X;S3]9fjbgBnTVge0
+R7
+31
+R8
+!i10b 1
+R9
+R10
+Z13 !s107 C:/ua-leci/1a2S/LSD/praticas/trab8/part2/ClkDividerN.vhd|
+!i113 1
+R11
+R12
+Edrinksfsm
+Z14 w1683643161
+R3
+R4
+!i122 0
+R0
+Z15 8C:/ua-leci/1a2S/LSD/praticas/trab8/part2/DrinksFSM.vhd
+Z16 FC:/ua-leci/1a2S/LSD/praticas/trab8/part2/DrinksFSM.vhd
+l0
+L4 1
+VK0?OmY5ToKifelh6Q1ZgB0
+!s100 ]59CGR>J7;JS_04cH5j`S0
+R7
+31
+Z17 !s110 1683643542
+!i10b 1
+R9
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/ua-leci/1a2S/LSD/praticas/trab8/part2/DrinksFSM.vhd|
+Z19 !s107 C:/ua-leci/1a2S/LSD/praticas/trab8/part2/DrinksFSM.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R3
+R4
+DEx4 work 9 drinksfsm 0 22 K0?OmY5ToKifelh6Q1ZgB0
+!i122 0
+l18
+L14 108
+V42_1=DmPDRQKfHDYlQk6R1
+!s100 ?HcTZldBG7]R^b[2N<DVz3
+R7
+31
+R17
+!i10b 1
+R9
+R18
+R19
+!i113 1
+R11
+R12

@@ -1,0 +1,1379 @@
+Timing Analyzer report for Counter_Demo
+Tue Mar 21 15:30:23 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'clock_50'
+ 13. Slow 1200mV 85C Model Setup: 'DebounceUnit:inst2|s_pulsedOut'
+ 14. Slow 1200mV 85C Model Hold: 'DebounceUnit:inst2|s_pulsedOut'
+ 15. Slow 1200mV 85C Model Hold: 'clock_50'
+ 16. Slow 1200mV 85C Model Metastability Summary
+ 17. Slow 1200mV 0C Model Fmax Summary
+ 18. Slow 1200mV 0C Model Setup Summary
+ 19. Slow 1200mV 0C Model Hold Summary
+ 20. Slow 1200mV 0C Model Recovery Summary
+ 21. Slow 1200mV 0C Model Removal Summary
+ 22. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 23. Slow 1200mV 0C Model Setup: 'clock_50'
+ 24. Slow 1200mV 0C Model Setup: 'DebounceUnit:inst2|s_pulsedOut'
+ 25. Slow 1200mV 0C Model Hold: 'DebounceUnit:inst2|s_pulsedOut'
+ 26. Slow 1200mV 0C Model Hold: 'clock_50'
+ 27. Slow 1200mV 0C Model Metastability Summary
+ 28. Fast 1200mV 0C Model Setup Summary
+ 29. Fast 1200mV 0C Model Hold Summary
+ 30. Fast 1200mV 0C Model Recovery Summary
+ 31. Fast 1200mV 0C Model Removal Summary
+ 32. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 33. Fast 1200mV 0C Model Setup: 'clock_50'
+ 34. Fast 1200mV 0C Model Setup: 'DebounceUnit:inst2|s_pulsedOut'
+ 35. Fast 1200mV 0C Model Hold: 'DebounceUnit:inst2|s_pulsedOut'
+ 36. Fast 1200mV 0C Model Hold: 'clock_50'
+ 37. Fast 1200mV 0C Model Metastability Summary
+ 38. Multicorner Timing Analysis Summary
+ 39. Board Trace Model Assignments
+ 40. Input Transition Times
+ 41. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 42. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 43. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 44. Setup Transfers
+ 45. Hold Transfers
+ 46. Report TCCS
+ 47. Report RSKM
+ 48. Unconstrained Paths Summary
+ 49. Clock Status Summary
+ 50. Unconstrained Input Ports
+ 51. Unconstrained Output Ports
+ 52. Unconstrained Input Ports
+ 53. Unconstrained Output Ports
+ 54. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; Counter_Demo                                        ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE115F29C7                                       ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.05        ;
+; Maximum used               ; 12          ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.4%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                         ;
++--------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------+
+; Clock Name                     ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                            ;
++--------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------+
+; clock_50                       ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock_50 }                       ;
+; DebounceUnit:inst2|s_pulsedOut ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { DebounceUnit:inst2|s_pulsedOut } ;
++--------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                             ;
++------------+-----------------+--------------------------------+------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                     ; Note                                           ;
++------------+-----------------+--------------------------------+------------------------------------------------+
+; 230.89 MHz ; 230.89 MHz      ; clock_50                       ;                                                ;
+; 537.63 MHz ; 437.64 MHz      ; DebounceUnit:inst2|s_pulsedOut ; limit due to minimum period restriction (tmin) ;
++------------+-----------------+--------------------------------+------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++---------------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary                     ;
++--------------------------------+--------+---------------+
+; Clock                          ; Slack  ; End Point TNS ;
++--------------------------------+--------+---------------+
+; clock_50                       ; -3.331 ; -75.642       ;
+; DebounceUnit:inst2|s_pulsedOut ; -0.860 ; -2.007        ;
++--------------------------------+--------+---------------+
+
+
++--------------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary                     ;
++--------------------------------+-------+---------------+
+; Clock                          ; Slack ; End Point TNS ;
++--------------------------------+-------+---------------+
+; DebounceUnit:inst2|s_pulsedOut ; 0.409 ; 0.000         ;
+; clock_50                       ; 0.891 ; 0.000         ;
++--------------------------------+-------+---------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary       ;
++--------------------------------+--------+---------------+
+; Clock                          ; Slack  ; End Point TNS ;
++--------------------------------+--------+---------------+
+; clock_50                       ; -3.000 ; -36.410       ;
+; DebounceUnit:inst2|s_pulsedOut ; -1.285 ; -5.140        ;
++--------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clock_50'                                                                                                                    ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; -3.331 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.076     ; 4.253      ;
+; -3.331 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.076     ; 4.253      ;
+; -3.331 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.076     ; 4.253      ;
+; -3.331 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.076     ; 4.253      ;
+; -3.285 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 4.203      ;
+; -3.284 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 4.202      ;
+; -3.223 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[12] ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.140      ;
+; -3.222 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[16] ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.139      ;
+; -3.222 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[20] ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.139      ;
+; -3.220 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 4.138      ;
+; -3.220 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 4.138      ;
+; -3.220 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 4.138      ;
+; -3.220 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 4.138      ;
+; -3.217 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 4.135      ;
+; -3.216 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 4.134      ;
+; -3.215 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 4.133      ;
+; -3.215 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 4.133      ;
+; -3.215 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 4.133      ;
+; -3.215 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 4.133      ;
+; -3.196 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.113      ;
+; -3.196 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.113      ;
+; -3.196 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.113      ;
+; -3.196 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.113      ;
+; -3.161 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 1.000        ; -0.075     ; 4.084      ;
+; -3.161 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 1.000        ; -0.075     ; 4.084      ;
+; -3.157 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.084     ; 4.071      ;
+; -3.156 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.084     ; 4.070      ;
+; -3.152 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.084     ; 4.066      ;
+; -3.151 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.084     ; 4.065      ;
+; -3.149 ; DebounceUnit:inst2|s_debounceCnt[15] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.066      ;
+; -3.149 ; DebounceUnit:inst2|s_debounceCnt[15] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.066      ;
+; -3.149 ; DebounceUnit:inst2|s_debounceCnt[15] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.066      ;
+; -3.149 ; DebounceUnit:inst2|s_debounceCnt[15] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.066      ;
+; -3.139 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.076     ; 4.061      ;
+; -3.139 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.076     ; 4.061      ;
+; -3.139 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.076     ; 4.061      ;
+; -3.139 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.076     ; 4.061      ;
+; -3.133 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.085     ; 4.046      ;
+; -3.132 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.085     ; 4.045      ;
+; -3.130 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.085     ; 4.043      ;
+; -3.129 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[3]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.046      ;
+; -3.129 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[4]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.046      ;
+; -3.129 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.085     ; 4.042      ;
+; -3.128 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[17] ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.045      ;
+; -3.127 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[1]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.044      ;
+; -3.127 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[14] ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.044      ;
+; -3.126 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.043      ;
+; -3.125 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[11] ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.042      ;
+; -3.124 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[2]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.041      ;
+; -3.121 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[13] ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.038      ;
+; -3.120 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[15] ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.037      ;
+; -3.102 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 4.020      ;
+; -3.102 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 4.020      ;
+; -3.102 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 4.020      ;
+; -3.102 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 4.020      ;
+; -3.102 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 4.020      ;
+; -3.101 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 4.019      ;
+; -3.096 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.013      ;
+; -3.096 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.013      ;
+; -3.096 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.013      ;
+; -3.096 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.013      ;
+; -3.090 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[12] ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.007      ;
+; -3.089 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[16] ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.006      ;
+; -3.089 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[20] ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 4.006      ;
+; -3.086 ; DebounceUnit:inst2|s_debounceCnt[15] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.085     ; 3.999      ;
+; -3.085 ; DebounceUnit:inst2|s_debounceCnt[15] ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.085     ; 3.998      ;
+; -3.084 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 4.002      ;
+; -3.083 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 4.001      ;
+; -3.060 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.085     ; 3.973      ;
+; -3.059 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.085     ; 3.972      ;
+; -3.051 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 3.968      ;
+; -3.051 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 3.968      ;
+; -3.051 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 3.968      ;
+; -3.051 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 3.968      ;
+; -3.039 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 3.957      ;
+; -3.039 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.084     ; 3.953      ;
+; -3.038 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.084     ; 3.952      ;
+; -3.037 ; DebounceUnit:inst2|s_debounceCnt[1]  ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 3.955      ;
+; -3.037 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 1.000        ; -0.079     ; 3.956      ;
+; -3.037 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 1.000        ; -0.079     ; 3.956      ;
+; -3.032 ; DebounceUnit:inst2|s_debounceCnt[20] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 3.949      ;
+; -3.032 ; DebounceUnit:inst2|s_debounceCnt[20] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 3.949      ;
+; -3.032 ; DebounceUnit:inst2|s_debounceCnt[20] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 3.949      ;
+; -3.032 ; DebounceUnit:inst2|s_debounceCnt[20] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 3.949      ;
+; -3.032 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 1.000        ; -0.079     ; 3.951      ;
+; -3.032 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 1.000        ; -0.079     ; 3.951      ;
+; -3.024 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_debounceCnt[12] ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 3.941      ;
+; -3.023 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_debounceCnt[16] ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 3.940      ;
+; -3.023 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_debounceCnt[20] ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 3.940      ;
+; -3.018 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 3.936      ;
+; -3.017 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 3.935      ;
+; -3.013 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 3.931      ;
+; -3.013 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 1.000        ; -0.080     ; 3.931      ;
+; -3.004 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 1.000        ; -0.079     ; 3.923      ;
+; -3.003 ; DebounceUnit:inst2|s_debounceCnt[20] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.085     ; 3.916      ;
+; -3.002 ; DebounceUnit:inst2|s_debounceCnt[20] ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.085     ; 3.915      ;
+; -3.000 ; DebounceUnit:inst2|s_debounceCnt[10] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 3.917      ;
+; -3.000 ; DebounceUnit:inst2|s_debounceCnt[10] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 3.917      ;
+; -3.000 ; DebounceUnit:inst2|s_debounceCnt[10] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 3.917      ;
+; -3.000 ; DebounceUnit:inst2|s_debounceCnt[10] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.081     ; 3.917      ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'DebounceUnit:inst2|s_pulsedOut'                                                                                                                       ;
++--------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                        ; Launch Clock                   ; Latch Clock                    ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------+------------+------------+
+; -0.860 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[2] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.079     ; 1.779      ;
+; -0.753 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[2] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.079     ; 1.672      ;
+; -0.713 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[1] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.079     ; 1.632      ;
+; -0.434 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; 0.332      ; 1.764      ;
+; -0.430 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; 0.332      ; 1.760      ;
+; -0.358 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; 0.332      ; 1.688      ;
+; -0.307 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[2] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.079     ; 1.226      ;
+; -0.256 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[1] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.079     ; 1.175      ;
+; 0.007  ; CounterUpDown4:inst|s_count[3] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.096     ; 0.895      ;
+; 0.154  ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[0] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.079     ; 0.765      ;
++--------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'DebounceUnit:inst2|s_pulsedOut'                                                                                                                       ;
++-------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock                   ; Latch Clock                    ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------+------------+------------+
+; 0.409 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[0] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.079      ; 0.674      ;
+; 0.477 ; CounterUpDown4:inst|s_count[3] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.096      ; 0.759      ;
+; 0.613 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.507      ; 1.306      ;
+; 0.685 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.507      ; 1.378      ;
+; 0.686 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[1] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.079      ; 0.951      ;
+; 0.693 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.507      ; 1.386      ;
+; 0.712 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[2] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.079      ; 0.977      ;
+; 0.987 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[1] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.079      ; 1.252      ;
+; 0.992 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[2] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.079      ; 1.257      ;
+; 1.000 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[2] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.079      ; 1.265      ;
++-------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clock_50'                                                                                                                    ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.891 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.511      ; 1.588      ;
+; 0.992 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[20] ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.259      ;
+; 1.011 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 1.277      ;
+; 1.019 ; DebounceUnit:inst2|s_debounceCnt[22] ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.098      ; 1.303      ;
+; 1.062 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.329      ;
+; 1.062 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.329      ;
+; 1.110 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 1.376      ;
+; 1.110 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 1.376      ;
+; 1.120 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 1.386      ;
+; 1.154 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.421      ;
+; 1.168 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[3]  ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.435      ;
+; 1.168 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[4]  ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.435      ;
+; 1.170 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[1]  ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.437      ;
+; 1.170 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[2]  ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.437      ;
+; 1.170 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.437      ;
+; 1.170 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[17] ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.437      ;
+; 1.171 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[12] ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.438      ;
+; 1.171 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[13] ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.438      ;
+; 1.171 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[15] ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.438      ;
+; 1.171 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[16] ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.438      ;
+; 1.197 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[11] ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.464      ;
+; 1.197 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[14] ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.464      ;
+; 1.213 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 1.479      ;
+; 1.214 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 1.480      ;
+; 1.216 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 1.482      ;
+; 1.226 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 1.492      ;
+; 1.269 ; DebounceUnit:inst2|s_dirtyIn         ; DebounceUnit:inst2|s_previousIn      ; clock_50     ; clock_50    ; 0.000        ; 0.099      ; 1.554      ;
+; 1.279 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 1.545      ;
+; 1.328 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 1.594      ;
+; 1.343 ; DebounceUnit:inst2|s_dirtyIn         ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.529      ; 2.058      ;
+; 1.411 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 1.677      ;
+; 1.456 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.511      ; 2.153      ;
+; 1.457 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 1.723      ;
+; 1.466 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.515      ; 2.167      ;
+; 1.470 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[2]  ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.737      ;
+; 1.496 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.763      ;
+; 1.503 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.511      ; 2.200      ;
+; 1.548 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 0.000        ; 0.076      ; 1.810      ;
+; 1.550 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 1.816      ;
+; 1.568 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 0.000        ; 0.076      ; 1.830      ;
+; 1.597 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.864      ;
+; 1.600 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.515      ; 2.301      ;
+; 1.620 ; DebounceUnit:inst2|s_debounceCnt[12] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.887      ;
+; 1.625 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.892      ;
+; 1.629 ; DebounceUnit:inst2|s_debounceCnt[19] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 1.895      ;
+; 1.630 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[20] ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.897      ;
+; 1.647 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.511      ; 2.344      ;
+; 1.648 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.915      ;
+; 1.674 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 1.940      ;
+; 1.679 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[2]  ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.946      ;
+; 1.679 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.511      ; 2.376      ;
+; 1.695 ; DebounceUnit:inst2|s_debounceCnt[1]  ; DebounceUnit:inst2|s_debounceCnt[1]  ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.962      ;
+; 1.713 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.980      ;
+; 1.717 ; DebounceUnit:inst2|s_debounceCnt[4]  ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.984      ;
+; 1.718 ; DebounceUnit:inst2|s_debounceCnt[22] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; -0.332     ; 1.572      ;
+; 1.727 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 1.994      ;
+; 1.733 ; DebounceUnit:inst2|s_debounceCnt[4]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 1.999      ;
+; 1.736 ; DebounceUnit:inst2|s_debounceCnt[17] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 2.003      ;
+; 1.737 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 2.003      ;
+; 1.756 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 2.022      ;
+; 1.767 ; DebounceUnit:inst2|s_debounceCnt[4]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 2.033      ;
+; 1.768 ; DebounceUnit:inst2|s_debounceCnt[10] ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 2.034      ;
+; 1.780 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[20] ; clock_50     ; clock_50    ; 0.000        ; 0.085      ; 2.051      ;
+; 1.786 ; DebounceUnit:inst2|s_debounceCnt[7]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.079      ; 2.051      ;
+; 1.792 ; DebounceUnit:inst2|s_debounceCnt[1]  ; DebounceUnit:inst2|s_debounceCnt[2]  ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 2.059      ;
+; 1.802 ; DebounceUnit:inst2|s_debounceCnt[3]  ; DebounceUnit:inst2|s_debounceCnt[3]  ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 2.069      ;
+; 1.807 ; DebounceUnit:inst2|s_debounceCnt[19] ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.510      ; 2.503      ;
+; 1.808 ; DebounceUnit:inst2|s_debounceCnt[4]  ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 2.075      ;
+; 1.813 ; DebounceUnit:inst2|s_dirtyIn         ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.099      ; 2.098      ;
+; 1.820 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 2.086      ;
+; 1.821 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 2.087      ;
+; 1.829 ; DebounceUnit:inst2|s_debounceCnt[14] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 2.096      ;
+; 1.831 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 2.098      ;
+; 1.836 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.511      ; 2.533      ;
+; 1.843 ; DebounceUnit:inst2|s_debounceCnt[3]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 2.109      ;
+; 1.846 ; DebounceUnit:inst2|s_debounceCnt[4]  ; DebounceUnit:inst2|s_debounceCnt[4]  ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 2.113      ;
+; 1.846 ; DebounceUnit:inst2|s_debounceCnt[7]  ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 2.112      ;
+; 1.852 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 2.119      ;
+; 1.854 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 2.120      ;
+; 1.855 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 2.121      ;
+; 1.856 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 2.123      ;
+; 1.860 ; DebounceUnit:inst2|s_debounceCnt[4]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 2.126      ;
+; 1.862 ; DebounceUnit:inst2|s_debounceCnt[3]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 2.128      ;
+; 1.863 ; DebounceUnit:inst2|s_debounceCnt[22] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; -0.333     ; 1.716      ;
+; 1.864 ; DebounceUnit:inst2|s_debounceCnt[22] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; -0.333     ; 1.717      ;
+; 1.864 ; DebounceUnit:inst2|s_debounceCnt[22] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 0.000        ; -0.333     ; 1.717      ;
+; 1.864 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 2.130      ;
+; 1.865 ; DebounceUnit:inst2|s_debounceCnt[17] ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.511      ; 2.562      ;
+; 1.866 ; DebounceUnit:inst2|s_debounceCnt[22] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 0.000        ; -0.333     ; 1.719      ;
+; 1.866 ; DebounceUnit:inst2|s_debounceCnt[10] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 2.132      ;
+; 1.876 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[1]  ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 2.143      ;
+; 1.880 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[16] ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 2.147      ;
+; 1.885 ; DebounceUnit:inst2|s_debounceCnt[1]  ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 2.152      ;
+; 1.890 ; DebounceUnit:inst2|s_debounceCnt[7]  ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.510      ; 2.586      ;
+; 1.890 ; DebounceUnit:inst2|s_debounceCnt[7]  ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 0.000        ; 0.080      ; 2.156      ;
+; 1.891 ; DebounceUnit:inst2|s_debounceCnt[22] ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 0.000        ; -0.332     ; 1.745      ;
+; 1.892 ; DebounceUnit:inst2|s_debounceCnt[3]  ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 2.159      ;
+; 1.895 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 2.162      ;
+; 1.896 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 0.000        ; 0.081      ; 2.163      ;
+; 1.901 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.511      ; 2.598      ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                                             ;
++------------+-----------------+--------------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                     ; Note                                                          ;
++------------+-----------------+--------------------------------+---------------------------------------------------------------+
+; 251.19 MHz ; 250.0 MHz       ; clock_50                       ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 599.16 MHz ; 437.64 MHz      ; DebounceUnit:inst2|s_pulsedOut ; limit due to minimum period restriction (tmin)                ;
++------------+-----------------+--------------------------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++---------------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary                      ;
++--------------------------------+--------+---------------+
+; Clock                          ; Slack  ; End Point TNS ;
++--------------------------------+--------+---------------+
+; clock_50                       ; -2.981 ; -66.828       ;
+; DebounceUnit:inst2|s_pulsedOut ; -0.669 ; -1.503        ;
++--------------------------------+--------+---------------+
+
+
++--------------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                      ;
++--------------------------------+-------+---------------+
+; Clock                          ; Slack ; End Point TNS ;
++--------------------------------+-------+---------------+
+; DebounceUnit:inst2|s_pulsedOut ; 0.365 ; 0.000         ;
+; clock_50                       ; 0.798 ; 0.000         ;
++--------------------------------+-------+---------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary        ;
++--------------------------------+--------+---------------+
+; Clock                          ; Slack  ; End Point TNS ;
++--------------------------------+--------+---------------+
+; clock_50                       ; -3.000 ; -36.410       ;
+; DebounceUnit:inst2|s_pulsedOut ; -1.285 ; -5.140        ;
++--------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clock_50'                                                                                                                     ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; -2.981 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.068     ; 3.912      ;
+; -2.981 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.068     ; 3.912      ;
+; -2.981 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.068     ; 3.912      ;
+; -2.981 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.068     ; 3.912      ;
+; -2.922 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.849      ;
+; -2.921 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.848      ;
+; -2.883 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.811      ;
+; -2.883 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.811      ;
+; -2.883 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.811      ;
+; -2.883 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.811      ;
+; -2.877 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.805      ;
+; -2.877 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.805      ;
+; -2.877 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.805      ;
+; -2.877 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.805      ;
+; -2.856 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.783      ;
+; -2.856 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.783      ;
+; -2.856 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.783      ;
+; -2.856 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.783      ;
+; -2.851 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[12] ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.778      ;
+; -2.850 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[16] ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.777      ;
+; -2.850 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[20] ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.777      ;
+; -2.844 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.772      ;
+; -2.843 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.771      ;
+; -2.824 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.075     ; 3.748      ;
+; -2.823 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.075     ; 3.747      ;
+; -2.819 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.068     ; 3.750      ;
+; -2.819 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.068     ; 3.750      ;
+; -2.819 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.068     ; 3.750      ;
+; -2.819 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.068     ; 3.750      ;
+; -2.818 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.075     ; 3.742      ;
+; -2.817 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.075     ; 3.741      ;
+; -2.808 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 1.000        ; -0.067     ; 3.740      ;
+; -2.808 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 1.000        ; -0.067     ; 3.740      ;
+; -2.808 ; DebounceUnit:inst2|s_debounceCnt[15] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.735      ;
+; -2.808 ; DebounceUnit:inst2|s_debounceCnt[15] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.735      ;
+; -2.808 ; DebounceUnit:inst2|s_debounceCnt[15] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.735      ;
+; -2.808 ; DebounceUnit:inst2|s_debounceCnt[15] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.735      ;
+; -2.797 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.076     ; 3.720      ;
+; -2.796 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.076     ; 3.719      ;
+; -2.774 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.701      ;
+; -2.774 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.701      ;
+; -2.774 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.701      ;
+; -2.774 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.701      ;
+; -2.771 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.699      ;
+; -2.771 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.699      ;
+; -2.771 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.699      ;
+; -2.771 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.699      ;
+; -2.760 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.687      ;
+; -2.759 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.686      ;
+; -2.755 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.076     ; 3.678      ;
+; -2.753 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.076     ; 3.676      ;
+; -2.752 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[4]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.679      ;
+; -2.751 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[3]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.678      ;
+; -2.750 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[1]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.677      ;
+; -2.750 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[17] ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.677      ;
+; -2.749 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[14] ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.676      ;
+; -2.749 ; DebounceUnit:inst2|s_debounceCnt[15] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.076     ; 3.672      ;
+; -2.748 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.675      ;
+; -2.748 ; DebounceUnit:inst2|s_debounceCnt[15] ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.076     ; 3.671      ;
+; -2.747 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[11] ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.674      ;
+; -2.745 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[2]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.672      ;
+; -2.743 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[13] ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.670      ;
+; -2.741 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[15] ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.668      ;
+; -2.730 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[12] ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.657      ;
+; -2.729 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[16] ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.656      ;
+; -2.729 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[20] ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.656      ;
+; -2.725 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.653      ;
+; -2.724 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.652      ;
+; -2.715 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.076     ; 3.638      ;
+; -2.714 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.076     ; 3.637      ;
+; -2.712 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.075     ; 3.636      ;
+; -2.711 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.075     ; 3.635      ;
+; -2.710 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 1.000        ; -0.070     ; 3.639      ;
+; -2.710 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 1.000        ; -0.070     ; 3.639      ;
+; -2.705 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.632      ;
+; -2.705 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.632      ;
+; -2.705 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.632      ;
+; -2.705 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.632      ;
+; -2.704 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 1.000        ; -0.070     ; 3.633      ;
+; -2.704 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 1.000        ; -0.070     ; 3.633      ;
+; -2.685 ; DebounceUnit:inst2|s_debounceCnt[20] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.612      ;
+; -2.685 ; DebounceUnit:inst2|s_debounceCnt[20] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.612      ;
+; -2.685 ; DebounceUnit:inst2|s_debounceCnt[20] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.612      ;
+; -2.685 ; DebounceUnit:inst2|s_debounceCnt[20] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.612      ;
+; -2.683 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.611      ;
+; -2.683 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.611      ;
+; -2.679 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_debounceCnt[12] ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.606      ;
+; -2.678 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_debounceCnt[16] ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.605      ;
+; -2.678 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_debounceCnt[20] ; clock_50     ; clock_50    ; 1.000        ; -0.072     ; 3.605      ;
+; -2.672 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.600      ;
+; -2.671 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.599      ;
+; -2.665 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 1.000        ; -0.071     ; 3.593      ;
+; -2.663 ; DebounceUnit:inst2|s_debounceCnt[10] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.073     ; 3.589      ;
+; -2.663 ; DebounceUnit:inst2|s_debounceCnt[10] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.073     ; 3.589      ;
+; -2.663 ; DebounceUnit:inst2|s_debounceCnt[10] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.073     ; 3.589      ;
+; -2.663 ; DebounceUnit:inst2|s_debounceCnt[10] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.073     ; 3.589      ;
+; -2.656 ; DebounceUnit:inst2|s_debounceCnt[7]  ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.073     ; 3.582      ;
+; -2.656 ; DebounceUnit:inst2|s_debounceCnt[7]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.073     ; 3.582      ;
+; -2.656 ; DebounceUnit:inst2|s_debounceCnt[7]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.073     ; 3.582      ;
+; -2.656 ; DebounceUnit:inst2|s_debounceCnt[7]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.073     ; 3.582      ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'DebounceUnit:inst2|s_pulsedOut'                                                                                                                        ;
++--------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------+------------+------------+
+; Slack  ; From Node                      ; To Node                        ; Launch Clock                   ; Latch Clock                    ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------+------------+------------+
+; -0.669 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[2] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.072     ; 1.596      ;
+; -0.576 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[2] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.072     ; 1.503      ;
+; -0.548 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[1] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.072     ; 1.475      ;
+; -0.286 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; 0.306      ; 1.591      ;
+; -0.262 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; 0.306      ; 1.567      ;
+; -0.220 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; 0.306      ; 1.525      ;
+; -0.168 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[2] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.072     ; 1.095      ;
+; -0.132 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[1] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.072     ; 1.059      ;
+; 0.102  ; CounterUpDown4:inst|s_count[3] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.087     ; 0.810      ;
+; 0.244  ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[0] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.072     ; 0.683      ;
++--------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'DebounceUnit:inst2|s_pulsedOut'                                                                                                                        ;
++-------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock                   ; Latch Clock                    ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------+------------+------------+
+; 0.365 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[0] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.072      ; 0.608      ;
+; 0.430 ; CounterUpDown4:inst|s_count[3] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.087      ; 0.688      ;
+; 0.544 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.465      ; 1.180      ;
+; 0.607 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.465      ; 1.243      ;
+; 0.615 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.465      ; 1.251      ;
+; 0.624 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[1] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.072      ; 0.867      ;
+; 0.648 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[2] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.072      ; 0.891      ;
+; 0.890 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[1] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.072      ; 1.133      ;
+; 0.901 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[2] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.072      ; 1.144      ;
+; 0.909 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[2] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.072      ; 1.152      ;
++-------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clock_50'                                                                                                                     ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.798 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.465      ; 1.434      ;
+; 0.898 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[20] ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.141      ;
+; 0.926 ; DebounceUnit:inst2|s_debounceCnt[22] ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.088      ; 1.185      ;
+; 0.930 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.172      ;
+; 0.979 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 0.000        ; 0.073      ; 1.223      ;
+; 0.979 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 0.000        ; 0.073      ; 1.223      ;
+; 0.994 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.236      ;
+; 1.013 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.255      ;
+; 1.014 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.256      ;
+; 1.056 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 0.000        ; 0.073      ; 1.300      ;
+; 1.095 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[3]  ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.338      ;
+; 1.095 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[4]  ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.338      ;
+; 1.096 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[1]  ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.339      ;
+; 1.096 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[17] ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.339      ;
+; 1.097 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[12] ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.340      ;
+; 1.097 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[2]  ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.340      ;
+; 1.097 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.340      ;
+; 1.097 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[13] ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.340      ;
+; 1.097 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[15] ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.340      ;
+; 1.097 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[16] ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.340      ;
+; 1.110 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.352      ;
+; 1.111 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.354      ;
+; 1.111 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.353      ;
+; 1.121 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.364      ;
+; 1.121 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[14] ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.364      ;
+; 1.122 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[11] ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.365      ;
+; 1.162 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.404      ;
+; 1.171 ; DebounceUnit:inst2|s_dirtyIn         ; DebounceUnit:inst2|s_previousIn      ; clock_50     ; clock_50    ; 0.000        ; 0.091      ; 1.433      ;
+; 1.198 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.440      ;
+; 1.236 ; DebounceUnit:inst2|s_dirtyIn         ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.484      ; 1.891      ;
+; 1.259 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.501      ;
+; 1.311 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.553      ;
+; 1.334 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.469      ; 1.974      ;
+; 1.337 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.465      ; 1.973      ;
+; 1.357 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.465      ; 1.993      ;
+; 1.364 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[2]  ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.607      ;
+; 1.376 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.619      ;
+; 1.412 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 0.000        ; 0.068      ; 1.651      ;
+; 1.413 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.655      ;
+; 1.414 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 0.000        ; 0.068      ; 1.653      ;
+; 1.417 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.073      ; 1.661      ;
+; 1.448 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.469      ; 2.088      ;
+; 1.456 ; DebounceUnit:inst2|s_debounceCnt[12] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.073      ; 1.700      ;
+; 1.478 ; DebounceUnit:inst2|s_debounceCnt[19] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.721      ;
+; 1.485 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.073      ; 1.729      ;
+; 1.485 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.073      ; 1.729      ;
+; 1.496 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[20] ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.739      ;
+; 1.514 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.465      ; 2.150      ;
+; 1.520 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.763      ;
+; 1.531 ; DebounceUnit:inst2|s_debounceCnt[1]  ; DebounceUnit:inst2|s_debounceCnt[1]  ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.774      ;
+; 1.533 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 0.000        ; 0.073      ; 1.777      ;
+; 1.537 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[2]  ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.780      ;
+; 1.540 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.465      ; 2.176      ;
+; 1.543 ; DebounceUnit:inst2|s_debounceCnt[22] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; -0.304     ; 1.410      ;
+; 1.543 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 0.000        ; 0.073      ; 1.787      ;
+; 1.549 ; DebounceUnit:inst2|s_debounceCnt[4]  ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.073      ; 1.793      ;
+; 1.573 ; DebounceUnit:inst2|s_debounceCnt[17] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.073      ; 1.817      ;
+; 1.575 ; DebounceUnit:inst2|s_debounceCnt[10] ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.818      ;
+; 1.578 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.820      ;
+; 1.591 ; DebounceUnit:inst2|s_debounceCnt[4]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.833      ;
+; 1.595 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[20] ; clock_50     ; clock_50    ; 0.000        ; 0.076      ; 1.842      ;
+; 1.597 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.839      ;
+; 1.600 ; DebounceUnit:inst2|s_debounceCnt[4]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.842      ;
+; 1.606 ; DebounceUnit:inst2|s_debounceCnt[7]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.070      ; 1.847      ;
+; 1.606 ; DebounceUnit:inst2|s_dirtyIn         ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.092      ; 1.869      ;
+; 1.628 ; DebounceUnit:inst2|s_debounceCnt[3]  ; DebounceUnit:inst2|s_debounceCnt[3]  ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.871      ;
+; 1.644 ; DebounceUnit:inst2|s_debounceCnt[4]  ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.887      ;
+; 1.644 ; DebounceUnit:inst2|s_debounceCnt[19] ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.464      ; 2.279      ;
+; 1.647 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 0.000        ; 0.073      ; 1.891      ;
+; 1.649 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.891      ;
+; 1.652 ; DebounceUnit:inst2|s_debounceCnt[14] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.073      ; 1.896      ;
+; 1.654 ; DebounceUnit:inst2|s_debounceCnt[1]  ; DebounceUnit:inst2|s_debounceCnt[2]  ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.897      ;
+; 1.656 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 0.000        ; 0.073      ; 1.900      ;
+; 1.658 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.900      ;
+; 1.664 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.906      ;
+; 1.665 ; DebounceUnit:inst2|s_debounceCnt[4]  ; DebounceUnit:inst2|s_debounceCnt[4]  ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.908      ;
+; 1.668 ; DebounceUnit:inst2|s_debounceCnt[3]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.910      ;
+; 1.672 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[16] ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.915      ;
+; 1.673 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.915      ;
+; 1.674 ; DebounceUnit:inst2|s_debounceCnt[7]  ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.917      ;
+; 1.679 ; DebounceUnit:inst2|s_debounceCnt[22] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; -0.306     ; 1.544      ;
+; 1.680 ; DebounceUnit:inst2|s_debounceCnt[22] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; -0.306     ; 1.545      ;
+; 1.680 ; DebounceUnit:inst2|s_debounceCnt[22] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 0.000        ; -0.306     ; 1.545      ;
+; 1.682 ; DebounceUnit:inst2|s_debounceCnt[22] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 0.000        ; -0.306     ; 1.547      ;
+; 1.683 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[1]  ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.926      ;
+; 1.687 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 0.000        ; 0.073      ; 1.931      ;
+; 1.687 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.465      ; 2.323      ;
+; 1.687 ; DebounceUnit:inst2|s_debounceCnt[3]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.929      ;
+; 1.691 ; DebounceUnit:inst2|s_debounceCnt[10] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.934      ;
+; 1.696 ; DebounceUnit:inst2|s_debounceCnt[7]  ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.464      ; 2.331      ;
+; 1.696 ; DebounceUnit:inst2|s_debounceCnt[7]  ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.939      ;
+; 1.702 ; DebounceUnit:inst2|s_debounceCnt[4]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.944      ;
+; 1.702 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.945      ;
+; 1.704 ; DebounceUnit:inst2|s_debounceCnt[22] ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 0.000        ; -0.304     ; 1.571      ;
+; 1.704 ; DebounceUnit:inst2|s_debounceCnt[1]  ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.073      ; 1.948      ;
+; 1.708 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 0.000        ; 0.071      ; 1.950      ;
+; 1.713 ; DebounceUnit:inst2|s_debounceCnt[3]  ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.956      ;
+; 1.717 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.960      ;
+; 1.722 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[12] ; clock_50     ; clock_50    ; 0.000        ; 0.072      ; 1.965      ;
+; 1.724 ; DebounceUnit:inst2|s_debounceCnt[20] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.073      ; 1.968      ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++---------------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary                      ;
++--------------------------------+--------+---------------+
+; Clock                          ; Slack  ; End Point TNS ;
++--------------------------------+--------+---------------+
+; clock_50                       ; -1.096 ; -24.105       ;
+; DebounceUnit:inst2|s_pulsedOut ; 0.097  ; 0.000         ;
++--------------------------------+--------+---------------+
+
+
++--------------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                      ;
++--------------------------------+-------+---------------+
+; Clock                          ; Slack ; End Point TNS ;
++--------------------------------+-------+---------------+
+; DebounceUnit:inst2|s_pulsedOut ; 0.188 ; 0.000         ;
+; clock_50                       ; 0.399 ; 0.000         ;
++--------------------------------+-------+---------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary        ;
++--------------------------------+--------+---------------+
+; Clock                          ; Slack  ; End Point TNS ;
++--------------------------------+--------+---------------+
+; clock_50                       ; -3.000 ; -30.658       ;
+; DebounceUnit:inst2|s_pulsedOut ; -1.000 ; -4.000        ;
++--------------------------------+--------+---------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clock_50'                                                                                                                     ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.096 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 2.042      ;
+; -1.095 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 2.041      ;
+; -1.089 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.038     ; 2.038      ;
+; -1.089 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.038     ; 2.038      ;
+; -1.089 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.038     ; 2.038      ;
+; -1.089 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.038     ; 2.038      ;
+; -1.047 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[12] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.993      ;
+; -1.046 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[16] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.992      ;
+; -1.046 ; DebounceUnit:inst2|s_debounceCnt[1]  ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 1.000        ; -0.039     ; 1.994      ;
+; -1.046 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[20] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.992      ;
+; -1.041 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 1.000        ; -0.039     ; 1.989      ;
+; -1.041 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 1.000        ; -0.039     ; 1.989      ;
+; -1.037 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.983      ;
+; -1.036 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.982      ;
+; -1.030 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.038     ; 1.979      ;
+; -1.030 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.038     ; 1.979      ;
+; -1.030 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.038     ; 1.979      ;
+; -1.030 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.038     ; 1.979      ;
+; -1.017 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.044     ; 1.960      ;
+; -1.017 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.044     ; 1.960      ;
+; -1.016 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.044     ; 1.959      ;
+; -1.016 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.044     ; 1.959      ;
+; -1.013 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.045     ; 1.955      ;
+; -1.012 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.045     ; 1.954      ;
+; -1.012 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.045     ; 1.954      ;
+; -1.011 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.045     ; 1.953      ;
+; -1.010 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[3]  ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[4]  ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.010 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.956      ;
+; -1.009 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[1]  ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.955      ;
+; -1.009 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[17] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.955      ;
+; -1.008 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[14] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.954      ;
+; -1.007 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.953      ;
+; -1.006 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[11] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.952      ;
+; -1.006 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.042     ; 1.951      ;
+; -1.006 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.042     ; 1.951      ;
+; -1.006 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.042     ; 1.951      ;
+; -1.006 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.042     ; 1.951      ;
+; -1.005 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[2]  ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.951      ;
+; -1.003 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 1.000        ; -0.035     ; 1.955      ;
+; -1.003 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 1.000        ; -0.035     ; 1.955      ;
+; -1.003 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[13] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.949      ;
+; -1.002 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[15] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.948      ;
+; -0.998 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.045     ; 1.940      ;
+; -0.997 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.045     ; 1.939      ;
+; -0.993 ; DebounceUnit:inst2|s_debounceCnt[15] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.045     ; 1.935      ;
+; -0.992 ; DebounceUnit:inst2|s_debounceCnt[15] ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.045     ; 1.934      ;
+; -0.991 ; DebounceUnit:inst2|s_debounceCnt[1]  ; DebounceUnit:inst2|s_debounceCnt[20] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.937      ;
+; -0.991 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.042     ; 1.936      ;
+; -0.991 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.042     ; 1.936      ;
+; -0.991 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.042     ; 1.936      ;
+; -0.991 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.042     ; 1.936      ;
+; -0.988 ; DebounceUnit:inst2|s_debounceCnt[15] ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 1.000        ; -0.039     ; 1.936      ;
+; -0.987 ; DebounceUnit:inst2|s_debounceCnt[3]  ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 1.000        ; -0.039     ; 1.935      ;
+; -0.986 ; DebounceUnit:inst2|s_debounceCnt[15] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.042     ; 1.931      ;
+; -0.986 ; DebounceUnit:inst2|s_debounceCnt[15] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.042     ; 1.931      ;
+; -0.986 ; DebounceUnit:inst2|s_debounceCnt[15] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.042     ; 1.931      ;
+; -0.986 ; DebounceUnit:inst2|s_debounceCnt[15] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.042     ; 1.931      ;
+; -0.985 ; DebounceUnit:inst2|s_debounceCnt[1]  ; DebounceUnit:inst2|s_debounceCnt[15] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.931      ;
+; -0.971 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.044     ; 1.914      ;
+; -0.970 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 1.000        ; -0.038     ; 1.919      ;
+; -0.970 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.044     ; 1.913      ;
+; -0.964 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.910      ;
+; -0.964 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.910      ;
+; -0.964 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.910      ;
+; -0.964 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.910      ;
+; -0.963 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 1.000        ; -0.039     ; 1.911      ;
+; -0.954 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 1.000        ; -0.039     ; 1.902      ;
+; -0.953 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[12] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.899      ;
+; -0.952 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[16] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.898      ;
+; -0.952 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[20] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.898      ;
+; -0.950 ; DebounceUnit:inst2|s_debounceCnt[7]  ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.896      ;
+; -0.947 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 1.000        ; -0.039     ; 1.895      ;
+; -0.946 ; DebounceUnit:inst2|s_debounceCnt[1]  ; DebounceUnit:inst2|s_debounceCnt[17] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.892      ;
+; -0.944 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_debounceCnt[12] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.890      ;
+; -0.944 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 1.000        ; -0.035     ; 1.896      ;
+; -0.944 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 1.000        ; -0.035     ; 1.896      ;
+; -0.943 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_debounceCnt[16] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.889      ;
+; -0.943 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_debounceCnt[20] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.889      ;
+; -0.940 ; DebounceUnit:inst2|s_debounceCnt[20] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 1.000        ; -0.045     ; 1.882      ;
+; -0.939 ; DebounceUnit:inst2|s_debounceCnt[20] ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 1.000        ; -0.045     ; 1.881      ;
+; -0.939 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.042     ; 1.884      ;
+; -0.939 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.042     ; 1.884      ;
+; -0.939 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.042     ; 1.884      ;
+; -0.939 ; DebounceUnit:inst2|s_debounceCnt[13] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.042     ; 1.884      ;
+; -0.938 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 1.000        ; -0.039     ; 1.886      ;
+; -0.938 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 1.000        ; -0.039     ; 1.886      ;
+; -0.933 ; DebounceUnit:inst2|s_debounceCnt[1]  ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 1.000        ; 0.152      ; 2.072      ;
+; -0.933 ; DebounceUnit:inst2|s_debounceCnt[20] ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 1.000        ; -0.042     ; 1.878      ;
+; -0.933 ; DebounceUnit:inst2|s_debounceCnt[20] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 1.000        ; -0.042     ; 1.878      ;
+; -0.933 ; DebounceUnit:inst2|s_debounceCnt[20] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 1.000        ; -0.042     ; 1.878      ;
+; -0.933 ; DebounceUnit:inst2|s_debounceCnt[20] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 1.000        ; -0.042     ; 1.878      ;
+; -0.933 ; DebounceUnit:inst2|s_debounceCnt[15] ; DebounceUnit:inst2|s_debounceCnt[20] ; clock_50     ; clock_50    ; 1.000        ; -0.041     ; 1.879      ;
++--------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'DebounceUnit:inst2|s_pulsedOut'                                                                                                                       ;
++-------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock                   ; Latch Clock                    ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------+------------+------------+
+; 0.097 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[2] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.042     ; 0.848      ;
+; 0.156 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[2] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.042     ; 0.789      ;
+; 0.187 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[1] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.042     ; 0.758      ;
+; 0.287 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; 0.152      ; 0.852      ;
+; 0.313 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; 0.152      ; 0.826      ;
+; 0.346 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; 0.152      ; 0.793      ;
+; 0.357 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[2] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.042     ; 0.588      ;
+; 0.382 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[1] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.042     ; 0.563      ;
+; 0.516 ; CounterUpDown4:inst|s_count[3] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.049     ; 0.422      ;
+; 0.586 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[0] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 1.000        ; -0.042     ; 0.359      ;
++-------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'DebounceUnit:inst2|s_pulsedOut'                                                                                                                        ;
++-------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------+------------+------------+
+; Slack ; From Node                      ; To Node                        ; Launch Clock                   ; Latch Clock                    ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------+------------+------------+
+; 0.188 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[0] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.042      ; 0.314      ;
+; 0.218 ; CounterUpDown4:inst|s_count[3] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.049      ; 0.351      ;
+; 0.291 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.243      ; 0.618      ;
+; 0.313 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[1] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.042      ; 0.439      ;
+; 0.323 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.243      ; 0.650      ;
+; 0.324 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[3] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.243      ; 0.651      ;
+; 0.333 ; CounterUpDown4:inst|s_count[2] ; CounterUpDown4:inst|s_count[2] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.042      ; 0.459      ;
+; 0.459 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[1] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.042      ; 0.585      ;
+; 0.461 ; CounterUpDown4:inst|s_count[1] ; CounterUpDown4:inst|s_count[2] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.042      ; 0.587      ;
+; 0.462 ; CounterUpDown4:inst|s_count[0] ; CounterUpDown4:inst|s_count[2] ; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 0.000        ; 0.042      ; 0.588      ;
++-------+--------------------------------+--------------------------------+--------------------------------+--------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clock_50'                                                                                                                     ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node                              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.399 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.242      ; 0.725      ;
+; 0.458 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.583      ;
+; 0.458 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[20] ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.583      ;
+; 0.478 ; DebounceUnit:inst2|s_debounceCnt[22] ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.049      ; 0.611      ;
+; 0.480 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 0.000        ; 0.043      ; 0.607      ;
+; 0.480 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 0.000        ; 0.043      ; 0.607      ;
+; 0.501 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 0.000        ; 0.040      ; 0.625      ;
+; 0.504 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.040      ; 0.628      ;
+; 0.504 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 0.000        ; 0.040      ; 0.628      ;
+; 0.527 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 0.000        ; 0.043      ; 0.654      ;
+; 0.536 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[3]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.661      ;
+; 0.536 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[4]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.661      ;
+; 0.537 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[12] ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.662      ;
+; 0.537 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[1]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.662      ;
+; 0.537 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[2]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.662      ;
+; 0.537 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.662      ;
+; 0.537 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[17] ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.662      ;
+; 0.538 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[13] ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.663      ;
+; 0.538 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[15] ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.663      ;
+; 0.538 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[16] ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.663      ;
+; 0.548 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[11] ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.673      ;
+; 0.548 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[14] ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.673      ;
+; 0.556 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.681      ;
+; 0.557 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.682      ;
+; 0.557 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.682      ;
+; 0.561 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.686      ;
+; 0.571 ; DebounceUnit:inst2|s_dirtyIn         ; DebounceUnit:inst2|s_previousIn      ; clock_50     ; clock_50    ; 0.000        ; 0.060      ; 0.715      ;
+; 0.587 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[0]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.712      ;
+; 0.607 ; DebounceUnit:inst2|s_dirtyIn         ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.261      ; 0.952      ;
+; 0.615 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.740      ;
+; 0.640 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.040      ; 0.764      ;
+; 0.651 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[2]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.776      ;
+; 0.662 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.243      ; 0.989      ;
+; 0.665 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.242      ; 0.991      ;
+; 0.667 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.792      ;
+; 0.668 ; DebounceUnit:inst2|s_debounceCnt[21] ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.246      ; 0.998      ;
+; 0.681 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.806      ;
+; 0.711 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 0.000        ; 0.037      ; 0.832      ;
+; 0.719 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.844      ;
+; 0.721 ; DebounceUnit:inst2|s_previousIn      ; DebounceUnit:inst2|s_debounceCnt[18] ; clock_50     ; clock_50    ; 0.000        ; 0.037      ; 0.842      ;
+; 0.723 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.043      ; 0.850      ;
+; 0.735 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.044      ; 0.863      ;
+; 0.742 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[20] ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.867      ;
+; 0.742 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.246      ; 1.072      ;
+; 0.749 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.243      ; 1.076      ;
+; 0.752 ; DebounceUnit:inst2|s_debounceCnt[12] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.043      ; 0.879      ;
+; 0.753 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.043      ; 0.880      ;
+; 0.756 ; DebounceUnit:inst2|s_debounceCnt[1]  ; DebounceUnit:inst2|s_debounceCnt[1]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.881      ;
+; 0.765 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[2]  ; clock_50     ; clock_50    ; 0.000        ; 0.042      ; 0.891      ;
+; 0.765 ; DebounceUnit:inst2|s_debounceCnt[19] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.890      ;
+; 0.771 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.243      ; 1.098      ;
+; 0.778 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 0.000        ; 0.044      ; 0.906      ;
+; 0.780 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[21] ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.905      ;
+; 0.790 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.040      ; 0.914      ;
+; 0.790 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 0.000        ; 0.044      ; 0.918      ;
+; 0.794 ; DebounceUnit:inst2|s_debounceCnt[4]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.040      ; 0.918      ;
+; 0.795 ; DebounceUnit:inst2|s_debounceCnt[10] ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.920      ;
+; 0.801 ; DebounceUnit:inst2|s_debounceCnt[3]  ; DebounceUnit:inst2|s_debounceCnt[3]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.926      ;
+; 0.803 ; DebounceUnit:inst2|s_debounceCnt[1]  ; DebounceUnit:inst2|s_debounceCnt[2]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.928      ;
+; 0.810 ; DebounceUnit:inst2|s_debounceCnt[17] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.043      ; 0.937      ;
+; 0.816 ; DebounceUnit:inst2|s_debounceCnt[4]  ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.941      ;
+; 0.817 ; DebounceUnit:inst2|s_debounceCnt[4]  ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.043      ; 0.944      ;
+; 0.819 ; DebounceUnit:inst2|s_debounceCnt[18] ; DebounceUnit:inst2|s_debounceCnt[20] ; clock_50     ; clock_50    ; 0.000        ; 0.045      ; 0.948      ;
+; 0.819 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.040      ; 0.943      ;
+; 0.820 ; DebounceUnit:inst2|s_debounceCnt[4]  ; DebounceUnit:inst2|s_debounceCnt[4]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.945      ;
+; 0.823 ; DebounceUnit:inst2|s_debounceCnt[4]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.040      ; 0.947      ;
+; 0.824 ; DebounceUnit:inst2|s_debounceCnt[19] ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.240      ; 1.148      ;
+; 0.825 ; DebounceUnit:inst2|s_dirtyIn         ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.062      ; 0.971      ;
+; 0.830 ; DebounceUnit:inst2|s_debounceCnt[11] ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.242      ; 1.156      ;
+; 0.833 ; DebounceUnit:inst2|s_debounceCnt[7]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.038      ; 0.955      ;
+; 0.833 ; DebounceUnit:inst2|s_debounceCnt[22] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; -0.150     ; 0.767      ;
+; 0.834 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[19] ; clock_50     ; clock_50    ; 0.000        ; 0.043      ; 0.961      ;
+; 0.842 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.040      ; 0.966      ;
+; 0.843 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 0.000        ; 0.044      ; 0.971      ;
+; 0.844 ; DebounceUnit:inst2|s_debounceCnt[16] ; DebounceUnit:inst2|s_debounceCnt[16] ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.969      ;
+; 0.844 ; DebounceUnit:inst2|s_debounceCnt[3]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.040      ; 0.968      ;
+; 0.845 ; DebounceUnit:inst2|s_debounceCnt[14] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.043      ; 0.972      ;
+; 0.847 ; DebounceUnit:inst2|s_debounceCnt[17] ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.242      ; 1.173      ;
+; 0.850 ; DebounceUnit:inst2|s_debounceCnt[7]  ; DebounceUnit:inst2|s_debounceCnt[7]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.975      ;
+; 0.856 ; DebounceUnit:inst2|s_debounceCnt[6]  ; DebounceUnit:inst2|s_debounceCnt[10] ; clock_50     ; clock_50    ; 0.000        ; 0.044      ; 0.984      ;
+; 0.857 ; DebounceUnit:inst2|s_debounceCnt[5]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 0.000        ; 0.040      ; 0.981      ;
+; 0.859 ; DebounceUnit:inst2|s_debounceCnt[7]  ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.984      ;
+; 0.860 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.985      ;
+; 0.861 ; DebounceUnit:inst2|s_debounceCnt[7]  ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.240      ; 1.185      ;
+; 0.861 ; DebounceUnit:inst2|s_debounceCnt[8]  ; DebounceUnit:inst2|s_debounceCnt[22] ; clock_50     ; clock_50    ; 0.000        ; 0.243      ; 1.188      ;
+; 0.861 ; DebounceUnit:inst2|s_debounceCnt[4]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 0.000        ; 0.040      ; 0.985      ;
+; 0.863 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[1]  ; clock_50     ; clock_50    ; 0.000        ; 0.042      ; 0.989      ;
+; 0.864 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.989      ;
+; 0.866 ; DebounceUnit:inst2|s_debounceCnt[3]  ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.991      ;
+; 0.871 ; DebounceUnit:inst2|s_debounceCnt[7]  ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 0.000        ; 0.038      ; 0.993      ;
+; 0.871 ; DebounceUnit:inst2|s_debounceCnt[2]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.040      ; 0.995      ;
+; 0.872 ; DebounceUnit:inst2|s_debounceCnt[10] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 0.997      ;
+; 0.873 ; DebounceUnit:inst2|s_debounceCnt[3]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.040      ; 0.997      ;
+; 0.882 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[5]  ; clock_50     ; clock_50    ; 0.000        ; 0.042      ; 1.008      ;
+; 0.885 ; DebounceUnit:inst2|s_debounceCnt[9]  ; DebounceUnit:inst2|s_debounceCnt[12] ; clock_50     ; clock_50    ; 0.000        ; 0.042      ; 1.011      ;
+; 0.889 ; DebounceUnit:inst2|s_debounceCnt[20] ; DebounceUnit:inst2|s_pulsedOut       ; clock_50     ; clock_50    ; 0.000        ; 0.043      ; 1.016      ;
+; 0.889 ; DebounceUnit:inst2|s_debounceCnt[0]  ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; 0.041      ; 1.014      ;
+; 0.891 ; DebounceUnit:inst2|s_debounceCnt[22] ; DebounceUnit:inst2|s_debounceCnt[6]  ; clock_50     ; clock_50    ; 0.000        ; -0.153     ; 0.822      ;
+; 0.892 ; DebounceUnit:inst2|s_debounceCnt[22] ; DebounceUnit:inst2|s_debounceCnt[9]  ; clock_50     ; clock_50    ; 0.000        ; -0.153     ; 0.823      ;
+; 0.892 ; DebounceUnit:inst2|s_debounceCnt[22] ; DebounceUnit:inst2|s_debounceCnt[8]  ; clock_50     ; clock_50    ; 0.000        ; -0.153     ; 0.823      ;
++-------+--------------------------------------+--------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++----------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                          ;
++---------------------------------+---------+-------+----------+---------+---------------------+
+; Clock                           ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack                ; -3.331  ; 0.188 ; N/A      ; N/A     ; -3.000              ;
+;  DebounceUnit:inst2|s_pulsedOut ; -0.860  ; 0.188 ; N/A      ; N/A     ; -1.285              ;
+;  clock_50                       ; -3.331  ; 0.399 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS                 ; -77.649 ; 0.0   ; 0.0      ; 0.0     ; -41.55              ;
+;  DebounceUnit:inst2|s_pulsedOut ; -2.007  ; 0.000 ; N/A      ; N/A     ; -5.140              ;
+;  clock_50                       ; -75.642 ; 0.000 ; N/A      ; N/A     ; -36.410             ;
++---------------------------------+---------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; HEX0[6]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX0[5]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX0[4]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX0[3]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX0[2]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX0[1]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; HEX0[0]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[3]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[2]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[1]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; LEDG[0]       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; SW[1]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SW[0]                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clock_50                ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; KEY[0]                  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; HEX0[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.38 V              ; -0.0144 V           ; 0.227 V                              ; 0.024 V                              ; 3.14e-10 s                  ; 3.39e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.38 V             ; -0.0144 V          ; 0.227 V                             ; 0.024 V                             ; 3.14e-10 s                 ; 3.39e-10 s                 ; Yes                       ; Yes                       ;
+; HEX0[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.33 V              ; -0.00496 V          ; 0.223 V                              ; 0.086 V                              ; 2.9e-09 s                   ; 2.73e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.33 V             ; -0.00496 V         ; 0.223 V                             ; 0.086 V                             ; 2.9e-09 s                  ; 2.73e-09 s                 ; Yes                       ; Yes                       ;
+; HEX0[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.38 V              ; -0.0144 V           ; 0.227 V                              ; 0.024 V                              ; 3.14e-10 s                  ; 3.39e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.38 V             ; -0.0144 V          ; 0.227 V                             ; 0.024 V                             ; 3.14e-10 s                 ; 3.39e-10 s                 ; Yes                       ; Yes                       ;
+; HEX0[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.07e-09 V                   ; 2.38 V              ; -0.0144 V           ; 0.227 V                              ; 0.024 V                              ; 3.14e-10 s                  ; 3.39e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.07e-09 V                  ; 2.38 V             ; -0.0144 V          ; 0.227 V                             ; 0.024 V                             ; 3.14e-10 s                 ; 3.39e-10 s                 ; Yes                       ; Yes                       ;
+; HEX0[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; HEX0[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.33 V              ; -0.00467 V          ; 0.226 V                              ; 0.087 V                              ; 2.91e-09 s                  ; 2.74e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.33 V             ; -0.00467 V         ; 0.226 V                             ; 0.087 V                             ; 2.91e-09 s                 ; 2.74e-09 s                 ; Yes                       ; Yes                       ;
+; HEX0[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; LEDG[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; LEDG[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; LEDG[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; LEDG[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.49e-09 V                   ; 2.38 V              ; -0.00552 V          ; 0.096 V                              ; 0.019 V                              ; 4.18e-10 s                  ; 3.59e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 4.49e-09 V                  ; 2.38 V             ; -0.00552 V         ; 0.096 V                             ; 0.019 V                             ; 4.18e-10 s                 ; 3.59e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.67e-09 V                   ; 2.38 V              ; -0.0485 V           ; 0.167 V                              ; 0.096 V                              ; 2.95e-10 s                  ; 2.73e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.67e-09 V                  ; 2.38 V             ; -0.0485 V          ; 0.167 V                             ; 0.096 V                             ; 2.95e-10 s                 ; 2.73e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.18e-09 V                   ; 2.38 V              ; -0.00483 V          ; 0.152 V                              ; 0.012 V                              ; 4.81e-10 s                  ; 6.29e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.18e-09 V                  ; 2.38 V             ; -0.00483 V         ; 0.152 V                             ; 0.012 V                             ; 4.81e-10 s                 ; 6.29e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; HEX0[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.36 V              ; -0.00552 V          ; 0.11 V                               ; 0.007 V                              ; 4.54e-10 s                  ; 4.35e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.36 V             ; -0.00552 V         ; 0.11 V                              ; 0.007 V                             ; 4.54e-10 s                 ; 4.35e-10 s                 ; Yes                       ; Yes                       ;
+; HEX0[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.33 V              ; -0.00269 V          ; 0.13 V                               ; 0.055 V                              ; 3.54e-09 s                  ; 3.29e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.33 V             ; -0.00269 V         ; 0.13 V                              ; 0.055 V                             ; 3.54e-09 s                 ; 3.29e-09 s                 ; Yes                       ; Yes                       ;
+; HEX0[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.36 V              ; -0.00552 V          ; 0.11 V                               ; 0.007 V                              ; 4.54e-10 s                  ; 4.35e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.36 V             ; -0.00552 V         ; 0.11 V                              ; 0.007 V                             ; 4.54e-10 s                 ; 4.35e-10 s                 ; Yes                       ; Yes                       ;
+; HEX0[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.67e-07 V                   ; 2.36 V              ; -0.00552 V          ; 0.11 V                               ; 0.007 V                              ; 4.54e-10 s                  ; 4.35e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.67e-07 V                  ; 2.36 V             ; -0.00552 V         ; 0.11 V                              ; 0.007 V                             ; 4.54e-10 s                 ; 4.35e-10 s                 ; Yes                       ; Yes                       ;
+; HEX0[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; HEX0[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.33 V              ; -0.00265 V          ; 0.133 V                              ; 0.056 V                              ; 3.55e-09 s                  ; 3.31e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.33 V             ; -0.00265 V         ; 0.133 V                             ; 0.056 V                             ; 3.55e-09 s                 ; 3.31e-09 s                 ; Yes                       ; Yes                       ;
+; HEX0[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; LEDG[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; LEDG[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; LEDG[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; LEDG[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.92e-07 V                   ; 2.35 V              ; -0.00996 V          ; 0.121 V                              ; 0.03 V                               ; 4.64e-10 s                  ; 4.47e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 6.92e-07 V                  ; 2.35 V             ; -0.00996 V         ; 0.121 V                             ; 0.03 V                              ; 4.64e-10 s                 ; 4.47e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.75e-07 V                   ; 2.35 V              ; -0.0109 V           ; 0.084 V                              ; 0.027 V                              ; 4.31e-10 s                  ; 3.61e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 3.75e-07 V                  ; 2.35 V             ; -0.0109 V          ; 0.084 V                             ; 0.027 V                             ; 4.31e-10 s                 ; 3.61e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 6.15e-07 V                   ; 2.35 V              ; -0.00712 V          ; 0.093 V                              ; 0.02 V                               ; 6.21e-10 s                  ; 7.9e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 6.15e-07 V                  ; 2.35 V             ; -0.00712 V         ; 0.093 V                             ; 0.02 V                              ; 6.21e-10 s                 ; 7.9e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; HEX0[6]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.73 V              ; -0.0384 V           ; 0.169 V                              ; 0.089 V                              ; 2.7e-10 s                   ; 2.62e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.73 V             ; -0.0384 V          ; 0.169 V                             ; 0.089 V                             ; 2.7e-10 s                  ; 2.62e-10 s                 ; Yes                       ; Yes                       ;
+; HEX0[5]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.64 V              ; -0.0117 V           ; 0.202 V                              ; 0.176 V                              ; 2.38e-09 s                  ; 2.22e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.64 V             ; -0.0117 V          ; 0.202 V                             ; 0.176 V                             ; 2.38e-09 s                 ; 2.22e-09 s                 ; No                        ; Yes                       ;
+; HEX0[4]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.73 V              ; -0.0384 V           ; 0.169 V                              ; 0.089 V                              ; 2.7e-10 s                   ; 2.62e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.73 V             ; -0.0384 V          ; 0.169 V                             ; 0.089 V                             ; 2.7e-10 s                  ; 2.62e-10 s                 ; Yes                       ; Yes                       ;
+; HEX0[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.74e-08 V                   ; 2.73 V              ; -0.0384 V           ; 0.169 V                              ; 0.089 V                              ; 2.7e-10 s                   ; 2.62e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.74e-08 V                  ; 2.73 V             ; -0.0384 V          ; 0.169 V                             ; 0.089 V                             ; 2.7e-10 s                  ; 2.62e-10 s                 ; Yes                       ; Yes                       ;
+; HEX0[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; HEX0[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.64 V              ; -0.0113 V           ; 0.208 V                              ; 0.179 V                              ; 2.38e-09 s                  ; 2.23e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.64 V             ; -0.0113 V          ; 0.208 V                             ; 0.179 V                             ; 2.38e-09 s                 ; 2.23e-09 s                 ; No                        ; Yes                       ;
+; HEX0[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; LEDG[3]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; LEDG[2]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; LEDG[1]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; LEDG[0]       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                             ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+; From Clock                     ; To Clock                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+; clock_50                       ; clock_50                       ; 1570     ; 0        ; 0        ; 0        ;
+; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 10       ; 0        ; 0        ; 0        ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                              ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+; From Clock                     ; To Clock                       ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+; clock_50                       ; clock_50                       ; 1570     ; 0        ; 0        ; 0        ;
+; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; 10       ; 0        ; 0        ; 0        ;
++--------------------------------+--------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 8     ; 8    ;
+; Unconstrained Output Ports      ; 11    ; 11   ;
+; Unconstrained Output Port Paths ; 32    ; 32   ;
++---------------------------------+-------+------+
+
+
++--------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                 ;
++--------------------------------+--------------------------------+------+-------------+
+; Target                         ; Clock                          ; Type ; Status      ;
++--------------------------------+--------------------------------+------+-------------+
+; DebounceUnit:inst2|s_pulsedOut ; DebounceUnit:inst2|s_pulsedOut ; Base ; Constrained ;
+; clock_50                       ; clock_50                       ; Base ; Constrained ;
++--------------------------------+--------------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; KEY[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; HEX0[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDG[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDG[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDG[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDG[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; KEY[0]     ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[0]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SW[1]      ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; HEX0[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[4]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[5]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[6]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDG[0]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDG[1]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDG[2]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; LEDG[3]     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Tue Mar 21 15:30:22 2023
+Info: Command: quartus_sta Counter_Demo -c Counter_Demo
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Counter_Demo.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name DebounceUnit:inst2|s_pulsedOut DebounceUnit:inst2|s_pulsedOut
+    Info (332105): create_clock -period 1.000 -name clock_50 clock_50
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -3.331
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.331             -75.642 clock_50 
+    Info (332119):    -0.860              -2.007 DebounceUnit:inst2|s_pulsedOut 
+Info (332146): Worst-case hold slack is 0.409
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.409               0.000 DebounceUnit:inst2|s_pulsedOut 
+    Info (332119):     0.891               0.000 clock_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -36.410 clock_50 
+    Info (332119):    -1.285              -5.140 DebounceUnit:inst2|s_pulsedOut 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -2.981
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -2.981             -66.828 clock_50 
+    Info (332119):    -0.669              -1.503 DebounceUnit:inst2|s_pulsedOut 
+Info (332146): Worst-case hold slack is 0.365
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.365               0.000 DebounceUnit:inst2|s_pulsedOut 
+    Info (332119):     0.798               0.000 clock_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -36.410 clock_50 
+    Info (332119):    -1.285              -5.140 DebounceUnit:inst2|s_pulsedOut 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.096
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.096             -24.105 clock_50 
+    Info (332119):     0.097               0.000 DebounceUnit:inst2|s_pulsedOut 
+Info (332146): Worst-case hold slack is 0.188
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.188               0.000 DebounceUnit:inst2|s_pulsedOut 
+    Info (332119):     0.399               0.000 clock_50 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -30.658 clock_50 
+    Info (332119):    -1.000              -4.000 DebounceUnit:inst2|s_pulsedOut 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4941 megabytes
+    Info: Processing ended: Tue Mar 21 15:30:23 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

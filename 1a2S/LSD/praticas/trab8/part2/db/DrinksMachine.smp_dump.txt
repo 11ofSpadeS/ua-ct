@@ -1,0 +1,10 @@
+
+State Machine - |DrinkMachine|DrinksFSM:inst1|fstate
+Name fstate.E90Plus fstate.E7080 fstate.E60 fstate.E50 fstate.E40 fstate.E20 fstate.E0 
+fstate.E0 0 0 0 0 0 0 0 
+fstate.E20 0 0 0 0 0 1 1 
+fstate.E40 0 0 0 0 1 0 1 
+fstate.E50 0 0 0 1 0 0 1 
+fstate.E60 0 0 1 0 0 0 1 
+fstate.E7080 0 1 0 0 0 0 1 
+fstate.E90Plus 1 0 0 0 0 0 1 
